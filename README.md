@@ -16,11 +16,11 @@ Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus
 
 ## 🔧 Projects I’m currently contributing to / working on:
 ### [Logoexecutive](https://github.com/TeamShiksha/logoexecutive/pulls?q=is%3Apr+assignee%3ADeltaDynamo+is%3Aclosed)
-| Major Contributions | PR |
-|--------------------| --- |
-| Rewrote several backend services to seamlessly integrate with MongoDB’s document-oriented architecture, ensuring efficient data handling post-migration from Firebase | [#345](https://github.com/TeamShiksha/logoexecutive/pull/345) |
-| Built Logo Search API v1.0 from scratch, enabling users to search logos based on domain prefixes, with validation and error handling for API key authentication and request parameters | [#366](https://github.com/TeamShiksha/logoexecutive/pull/366) |
-| Integrated New relic for Logs and Application Monitoring| [#398](https://github.com/TeamShiksha/logoexecutive/pull/398) |
+| **Major Contributions**                                                                                                                                                      | **PR**                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Rewrote several backend services to seamlessly integrate with MongoDB’s document-oriented architecture, ensuring efficient data handling post-migration from Firebase         | [#345](https://github.com/TeamShiksha/logoexecutive/pull/345)                              |
+| Built Logo Search API v1.0 from scratch, enabling users to search logos based on domain prefixes, with validation and error handling for API key authentication and parameters | [#366](https://github.com/TeamShiksha/logoexecutive/pull/366)                              |
+| Integrated New Relic for logs and application monitoring                                                                                                                      | [#398](https://github.com/TeamShiksha/logoexecutive/pull/398)                              |
 
 <div align="center">
   <h3>Contribution Stats</h3>
@@ -37,7 +37,7 @@ Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus
 | **Coursework / College**                                                                            | **Duration / GPA**  |
 |-----------------------------------------------------------------------------------------------------|---------------------|
 | 📜 **Bachelor of Engineering (Electronics & Communication Engineering)**                      | 📆 **2019 - 2023**     |
-| 🏫 **University Institute of Technology, The University of Burdwan**                          | 📈 **C.G.P.A**: 9.06 / 10 |
+| 🏫 **University Institute of Technology, The University of Burdwan**                          | 📈 **C.G.P.A**: **9.06 / 10** |
 
 <br>
 

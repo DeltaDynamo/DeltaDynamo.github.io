@@ -14,8 +14,9 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
-  rouge:
-    css: 'monokai'
+
+rouge:
+  css: 'monokai'
 
 ############################################
 #remote_theme: pages-themes/architect@v0.2.0

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Post1"
 slug: "1st Post"
 date: 2024-12-06

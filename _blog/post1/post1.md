@@ -14,6 +14,4 @@ public class HelloWorld {
 }
 ```
 
-<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" class="img-large">
-<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" class="img-medium">
-<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" class="img-small">
+<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" width="60%" height="30%">

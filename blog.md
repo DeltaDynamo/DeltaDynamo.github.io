@@ -8,7 +8,7 @@ title: Blog
 <ul>
   {% for post in site.blog %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}" style="font-weight: bold;">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>

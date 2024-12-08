@@ -1,15 +1,6 @@
 🚀 **Software Engineer** | 💻 **Backend Developer**
 
-<table align="center">
-  <tr>
-    <td><a href="#-about">About</a></td>
-    <td><a href="#-skills">Skills</a></td>
-    <td><a href="#-projects-im-currently-contributing-to--working-on">Projects</a></td>
-    <td><a href="/blog">Blogs</a></td>
-    <td><a href="#-education">Education</a></td>
-    <td><a href="#-lets-connect-feel-free-to-reach-out-for-collaboration-or-just-to-chat-about-tech">Contact</a></td>
-  </tr>
-</table>
+[About](#-about) | [Skills](#-skills) | [Projects](#-projects-im-currently-contributing-to--working-on) | [Blogs](/blog) | [Education](#-education) | [Contact](#-lets-connect-feel-free-to-reach-out-for-collaboration-or-just-to-chat-about-tech)
 
 ## 👋 About
 Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus on **backend development**. While my expertise lies in building robust and scalable backend systems, I also have a bit of hands on in **frontend development**, which allows me to contribute across the full stack. I always aim to create efficient, maintainable solutions that deliver value. I’m passionate about solving challenging problems and optimizing code for better performance. I also enjoy contributing to open-source projects and build my own in my spare time.

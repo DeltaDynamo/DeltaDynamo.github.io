@@ -10,7 +10,7 @@ Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus
 ## 💻 Skills
 <div align="center">
   <a href="https://deltadynamo.github.io/">
-    <img src="https://skillicons.dev/icons?i=java,js,ts,nodejs,mongodb,mysql,spring,react,vscode,jest,postman,eclipse,git,githubactions,html,css,python&perline=20" alt="MySkills" />
+    <img src="https://skillicons.dev/icons?i=java,js,ts,nodejs,mongodb,mysql,spring,react,vscode,jest,postman,eclipse,git,githubactions,html,css&perline=8" alt="MySkills" />
   </a>
 </div>
 

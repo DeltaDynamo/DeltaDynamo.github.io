@@ -4,14 +4,26 @@ title: "Post1"
 slug: "1st Post"
 date: 2024-12-06
 ---
-Hello viewers. These are the content of the blog post.
+# Java ArrayList: A Dynamic Array
+
+In Java, an `ArrayList` is a resizable array that allows you to store elements dynamically. Unlike arrays, which have a fixed size, `ArrayList` can grow and shrink in size as elements are added or removed.
+
+<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" class="medium-image">
+
+## Creating an ArrayList
+
+You can create an `ArrayList` using the following syntax:
 
 ```java
-public class HelloWorld {
+import java.util.ArrayList;
+
+public class Example {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        System.out.println(fruits);
     }
 }
-```
-
-<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" width="60%" height="30%">

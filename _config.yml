@@ -6,6 +6,10 @@ collections:
     output: true
     permalink: /blog/:slug/
 
+markdown: kramdown
+highlighter: rouge
+rouge:
+  css: monokai
 ############################################
 #remote_theme: pages-themes/architect@v0.2.0
 #plugins:

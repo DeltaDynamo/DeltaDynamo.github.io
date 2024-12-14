@@ -11,7 +11,7 @@ title: Blog
       <span style="color: grey;">
         {{ post.date | date: "%Y-%m-%d" }}:
       </span>
-      <a href="{{ post.url }}" style="font-weight: bold;">
+      <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </li>

@@ -1,7 +1,3 @@
-🚀 **Software Engineer** | 💻 **Backend Developer**
-
-[About](#-about) | [Skills](#-skills) | [Projects](#-projects-im-currently-contributing-to--working-on) | [Blogs](/blog) | [Education](#-education) | [Contact](#-lets-connect-feel-free-to-reach-out-for-collaboration-or-just-to-chat-about-tech)
-
 ## 👋 About
 Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus on **backend development**. While my expertise lies in building robust and scalable backend systems, I also have a bit of hands on in **frontend development**, which allows me to contribute across the full stack. I always aim to create efficient, maintainable solutions that deliver value. I’m passionate about solving challenging problems and optimizing code for better performance. I also enjoy contributing to open-source projects and build my own in my spare time.
 
@@ -43,14 +39,3 @@ Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus
 | 🏫 **University Institute of Technology, The University of Burdwan**                          | 📈 **C.G.P.A**: **9.06 / 10** |
 
 <br>
-
-### 📫 **Let’s Connect!** Feel free to reach out for collaboration or just to chat about tech!
-- [**LinkedIn**](https://www.linkedin.com/in/anubhavsrivastavain/)
-- [**LinkTree**](https://linktr.ee/anubhavsrivastava)
-- [**Github**](https://github.com/DeltaDynamo)
-
----
-<br>
-<div class="footer" align="center" style="text-align: center; font-size: 1rem; color: #666;">
-  <p>Made with ❤️ by Anubhav Srivastava. &copy;  All rights reserved.</p>
-</div>

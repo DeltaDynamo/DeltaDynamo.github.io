@@ -3,6 +3,9 @@ layout: page
 title: Blog
 ---
 
+## Software Engineering Insights
+---
+
 <ul>
   {% for post in site.blog %}
     <li>

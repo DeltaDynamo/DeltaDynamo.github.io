@@ -1,9 +1,6 @@
 ---
 layout: page
-title: Blog
----
-
-## Software Engineering Insights
+title: Software Engineering Insights
 ---
 
 <ul>

@@ -5,14 +5,27 @@ Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus
 ## 💻 Skills
 <div align="center">
   <a href="https://deltadynamo.github.io/">
-    <img src="https://skillicons.dev/icons?i=java,js,ts,nodejs,mongodb,mysql,spring,react,vscode,jest,postman,eclipse,git,githubactions,html,css&perline=8" alt="MySkills" />
+    <img src="https://skillicons.dev/icons?i=java,spring,mysql,mongodb,aws,maven,eclipse,postman,js,ts,nodejs,express,vscode,jest,git,react&perline=8" alt="MySkills" />
   </a>
 </div>
 
 ---
 
-## 🔧 Projects I’m currently contributing to / working on:
-### [Logoexecutive](https://github.com/TeamShiksha/logoexecutive/pulls?q=is%3Apr+assignee%3ADeltaDynamo+is%3Aclosed)
+## 🏆 Professional Experience
+
+### Software Engineer • **Tata Consultancy Services**
+ 📅 *October 2023 – Present*  
+ 
+  - Designed and implemented **robust and resilient APIs** that support the product’s core functionality.  
+  - Refactored and optimized existing codebase to **enhance performance** and maintainability.  
+  - Collaborated with cross-functional teams to integrate new features and improve overall system efficiency.  
+
+💡 Committed to delivering efficient, scalable, and high-quality engineering solutions that drive business success.  
+
+---
+
+## 🔧 Open Source Contributions
+### [OpenLogo](https://github.com/TeamShiksha/openlogo/pulls?q=is%3Apr+assignee%3ADeltaDynamo+is%3Aclosed)
 
 | **Major Contributions**                                                                                     | **PR**                                                        |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -34,9 +47,6 @@ Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus
 
 ## 🎓 Educational Background
 
-| **Coursework / College**                                                                            | **Duration / GPA**  |
-|-----------------------------------------------------------------------------------------------------|---------------------|
-| 📜 **Bachelor of Engineering (Electronics & Communication Engineering)**                      | 📆 **2019 - 2023**     |
-| 🏫 **University Institute of Technology, The University of Burdwan**                          | 📈 **C.G.P.A**: **9.06 / 10** |
+I earned my **Bachelor of Engineering** in **Electronics and Communication Engineering** from the **University Institute of Technology, The University of Burdwan**, graduating in **August 2023** with a **C.G.P.A** of **9.06/10**, the second-highest in my department. During my academic journey (2019–2023), I completed coursework in **Object-Oriented Programming, Data Structures & Algorithms, Computer Networks, Mathematics, Computer Architecture**, among other core engineering subjects, which provided me with a strong foundation in software development and engineering principles.
 
 ---

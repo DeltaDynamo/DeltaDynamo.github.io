@@ -23,5 +23,9 @@ minima:
   date_format: "%Y-%m-%d"
 
   social_links:
-    - { platform: github,         user_url: "https://github.com/DeltaDynamo" }
-    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/anubhavsrivastavain" }
+    - title: Github
+      icon: github
+      url: "https://github.com/DeltaDynamo"
+    - title: LinkedIn
+      icon: linkedin
+      url: "https://www.linkedin.com/in/anubhavsrivastavain"

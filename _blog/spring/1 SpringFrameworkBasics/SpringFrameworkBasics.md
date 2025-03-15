@@ -57,12 +57,13 @@ public class OrderService {
 Now, `OrderService` receives `PaymentService` as a dependency, making it easier to replace, mock, or modify it.
 
 #### Inversion of Control vs Dependency Injection
-| Feature | Inversion of Control (IoC) | Dependency Injection (DI) |
-|---------|---------------------------|---------------------------|
-| **Definition** | A broader design principle where the framework manages object creation and lifecycle. | A specific technique to implement IoC by injecting dependencies into objects rather than creating them manually. |
-| **Control Mechanism** | The flow of control is reversed – instead of the application controlling object creation, the framework does. | Dependencies are provided from an external source (e.g., Spring container) rather than being instantiated inside the class. |
-| **Implementation** | Achieved using various techniques like Dependency Injection, Service Locator, Factory Pattern, etc. | Specifically implemented through constructor injection, setter injection, or field injection. |
-| **Example** | IoC ensures that Spring manages the lifecycle of beans in the ApplicationContext. | When a class receives its dependencies via constructor injection rather than creating them inside the class. |
+
+| Feature                      | Inversion of Control (IoC)                                | Dependency Injection (DI)                          |
+|------------------------------|----------------------------------------------------------|--------------------------------------------------|
+| **Definition**                | A broader design principle where the framework manages object creation and lifecycle. | A specific technique to implement IoC by injecting dependencies instead of creating them manually. |
+| **Control Mechanism**         | The flow of control is reversed – instead of the application controlling object creation, the framework does. | Dependencies are provided from an external source (e.g., Spring container) rather than being instantiated inside the class. |
+| **Implementation**            | Achieved using various techniques like Dependency Injection, Service Locator, Factory Pattern, etc. | Specifically implemented through constructor injection, setter injection, or field injection. |
+| **Example**                   | IoC ensures that Spring manages the lifecycle of beans in the ApplicationContext. | When a class receives its dependencies via constructor injection or setter injection rather than creating them inside the class. |
 
 ---
 

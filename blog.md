@@ -4,7 +4,7 @@ title: Software Engineering Insights
 ---
 
 <ul>
-  {% for post in site.blog %}
+  {% for post in site.blog reversed %}
     <li>
       <h3>
         <span style="color: grey;">

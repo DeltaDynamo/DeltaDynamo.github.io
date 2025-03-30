@@ -11,6 +11,8 @@ tags: [Spring, Java, Dependency Injection, IoC, Spring Boot]
     <img src="./assets/banner.jpg" alt="Banner" style="width:95%">
 </div>
 
+![Banner](./assets/banner.jpg)
+
 Spring Framework is one of the most popular frameworks for building Java applications. It simplifies enterprise Java development by providing a comprehensive programming and configuration model. From building a simple web application to a complex microservices architecture, Spring has got everything needed to build a good engineering solution.
 
 ---

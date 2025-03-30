@@ -5,6 +5,7 @@ slug: "spring-framework-basics"
 date: 2025-03-15
 author: Anubhav Srivastava
 tags: [Spring, Java, Dependency Injection, IoC, Spring Boot]
+banner: "./assets/banner.webp"
 ---
 
 Spring Framework is one of the most popular frameworks for building Java applications. It simplifies enterprise Java development by providing a comprehensive programming and configuration model. From building a simple web application to a complex microservices architecture, Spring has got everything needed to build a good engineering solution.

@@ -177,12 +177,11 @@ git stash
 
 ### 12. `git reset`
 #### Scenario: Undoing Changes
-To unstage changes or reset commit history.
+To unstage changes or reset commit history based on selected reset mode.
 ```sh
 git reset <file>
 git reset --hard <commit_hash>
 ```
-**Use Case:** Reverts changes based on the selected reset mode.
 
 ---
 
@@ -192,7 +191,6 @@ To undo a commit by creating a new commit.
 ```sh
 git revert <commit_hash>
 ```
-**Use Case:** Preserves history while rolling back changes.
 
 ---
 
@@ -202,69 +200,62 @@ To apply a commit from one branch into another.
 ```sh
 git cherry-pick <commit_hash>
 ```
-**Use Case:** Selectively brings changes into a different branch.
 
 ---
 
 ### 15. `git fetch`
 #### Scenario: Retrieving Updates Without Merging
-To get the latest changes from the remote repository.
+To get the latest changes from the remote repository. This command updates local metadata without modifying working files
 ```sh
 git fetch
 ```
-**Use Case:** Updates local metadata without modifying working files.
 
 ---
 
 ### 16. `git pull`
 #### Scenario: Getting the Latest Changes from Remote
-To fetch and merge changes from the remote repository.
+To fetch and merge changes from the remote repository. This synchronizes local code with the latest remote changes
 ```sh
 git pull
 ```
-**Use Case:** Synchronizes local code with the latest remote changes.
 
 ---
 
 ### 17. `git push`
 #### Scenario: Uploading Local Changes to Remote
-To share local commits with the remote repository.
+To send local commits to the remote repository.
 ```sh
 git push origin <branch_name>
 ```
-**Use Case:** Sends local changes to the remote repository.
 
 ---
 
 ### 18. `git tag`
 #### Scenario: Marking Important Points in History
-To create a tag for a specific commit.
+To create a tag for a specific commit. It helps to add labels to significant versions like releases.
 ```sh
 git tag <tag_name>
 ```
-**Use Case:** Labels significant versions like releases.
 
 ---
 
 ### 19. `git bisect`
 #### Scenario: Finding a Buggy Commit
-To perform a binary search to locate the commit that introduced a bug.
+To perform a binary search to locate the commit that introduced a bug. It helps to efficiently identify faulty commits in large projects.
 ```sh
 git bisect start
 git bisect bad
 git bisect good <commit_hash>
 ```
-**Use Case:** Efficiently identifies faulty commits in large projects.
 
 ---
 
 ### 20. `git blame`
 #### Scenario: Identifying Who Made a Change
-To find out who last modified each line in a file.
+To find out who last modified each line in a file. Helps track changes for debugging and code review.
 ```sh
 git blame <file>
 ```
-**Use Case:** Helps track changes for debugging and code review.
 
 ---
 

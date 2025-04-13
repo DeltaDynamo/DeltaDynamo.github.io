@@ -1,5 +1,5 @@
 .post-tags {
-  margin-top: 10px;
+  margin: 10px 0;
   display: flex;
   flex-wrap: nowrap;
   gap: 8px;
@@ -15,4 +15,20 @@
   color: #000000;
   font-weight: 500;
 }
-  
+
+.social-links {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 5px;
+}
+
+.separator {
+  margin: 0 8px;
+  color: #888;
+}

@@ -4,7 +4,7 @@ title: "Basics of the Spring Framework"
 slug: "spring-framework-basics"
 date: 2025-03-15
 author: Anubhav Srivastava
-tags: [spring, dependency injection, inversion of control]
+tags: [spring, java, dependency injection, inversion of control]
 ---
 
 Spring Framework is one of the most popular frameworks for building Java applications. It simplifies enterprise Java development by providing a comprehensive programming and configuration model. From building a simple web application to a complex microservices architecture, Spring has got everything needed to build a good engineering solution.

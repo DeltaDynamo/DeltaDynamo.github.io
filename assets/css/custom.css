@@ -1,6 +1,5 @@
 .post-tags {
   margin-top: 10px;
-  margin-bottom: 10px;
   display: flex;
   flex-wrap: nowrap;
   gap: 8px;
@@ -16,3 +15,4 @@
   color: #000000;
   font-weight: 500;
 }
+  

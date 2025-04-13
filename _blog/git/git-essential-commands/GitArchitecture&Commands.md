@@ -4,7 +4,7 @@ title: "Mastering Git: Architecture, Essential Commands and When to Use Them"
 slug: "mastering-git-architecture-essential-commands"
 date: 2025-04-05
 author: Anubhav Srivastava
-tags: [git, version control]
+tags: [git, version controle, github, cicd]
 ---
 
 Git today is probably the most important tool to master as a developer. It doesn't matter what tech stack we use, which side of the application we work on (be it frontend or backend), knowing Git is very important. In this post covers we will try to look at some of the essential Git commands along with their usage scenarios.
@@ -16,7 +16,7 @@ Git is a free and open source **distributed version control system (DVCS)** desi
 #### Core Components of Git Architecture
 
 <div align="center">
-  <img src="{{ '/assets/git-wkf-diagram.webp' | relative_url }}" alt="git-workflow-diagram" style="width:90%">
+    <img src="https://raw.githubusercontent.com/DeltaDynamo/DeltaDynamo.github.io/refs/heads/main/_blog/git/git-essential-commands/assets/git-wkf-diagram.webp" alt="Banner" style="width:90%">
 </div>
 
 ##### 1. **Working Directory**

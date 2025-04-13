@@ -9,7 +9,7 @@ collections:
     output: true
     permalink: /blog/:slug/
 
-remote_theme: jekyll/minima@2.5.1
+remote_theme: jekyll/minima
 
 plugins:
   - jekyll-remote-theme

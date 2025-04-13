@@ -21,17 +21,7 @@
   font-size: 1.05rem;
 }
 
-.social-links a:link,
-.social-links a:visited,
-.social-links a:hover,
-.social-links a:active {
-  color: #79b8ff; 
-  text-decoration: none;
-  color: inherit;
-  margin: 0 5px;
-}
-
 .separator {
   margin: 0 10px;
-  color: #888;
+  color: #acacac;
 }

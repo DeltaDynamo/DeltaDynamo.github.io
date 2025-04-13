@@ -4,6 +4,9 @@ description: Personal Website
 author:
   name: Anubhav Srivastava
 
+url: "https://deltadynamo.github.io"
+baseurl: ""
+
 collections:
   blog:
     output: true
@@ -19,6 +22,9 @@ header_pages:
 
 minima:
   skin: dark
+
+  include:
+    - head-custom.html
 
   date_format: "%Y-%m-%d"
 

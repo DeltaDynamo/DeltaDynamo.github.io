@@ -47,6 +47,9 @@ my-springboot-app/
 
 > Note: While `src/main/java` is conventional, Maven allows us to change it, but it's highly recommended to follow this convention for compatibility and tooling support.
 
+More about Maven standard directory layout : [Introduction to the Standard Directory Layout
+](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
+
 ---
 
 ### 📂 2. Where Are All the Dependencies Stored?

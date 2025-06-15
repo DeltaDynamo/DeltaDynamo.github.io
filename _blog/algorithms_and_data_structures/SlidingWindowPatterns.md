@@ -245,3 +245,83 @@ public class Solution {
 ```
 
 ---
+
+#### 🧩 Pattern 3: Variable-Size Sliding Window with HashMap/HashSet (Frequency Tracking)
+
+##### 📘 Problem: Replace the Substring for Balanced String (Leetcode 1234)
+
+**Link:** [https://leetcode.com/problems/replace-the-substring-for-balanced-string/](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)
+
+#### 🔍 Problem Summary
+Given a string s consisting only of characters 'Q', 'W', 'E', and 'R'.
+
+The string is considered balanced if each of these four characters occurs exactly n/4 times, where n is the length of the string.
+
+Our task is to find the minimum length of a substring that you can replace (with any combination of characters) such that the resulting string is balanced.
+
+###### 🎯 Goal
+Find the minimum window (substring) length that, if replaced with any characters, would make the entire string balanced.
+
+##### 🧠 Key Observations
+Target frequency per character is s.length() / 4.
+
+If a character appears more than that, it is in excess.
+
+We don’t care what you replace the substring with — just that replacing it reduces the overrepresented characters.
+
+✅ **Step 1: Count the characters**
+Use a map or array to count how many 'Q', 'W', 'E', and 'R' appear in s.
+Determine which characters are in excess (greater than n/4).
+
+✅ **Step 2: Use a Sliding Window**
+Try to find the smallest window such that removing it from the string allows the remaining part to become balanced.=
+In the window, we need to track character counts.
+Using two pointers (left and right) to shrink and expand the window.
+
+✅ **Step 3: Validation Condition**
+While sliding the window, we need to check if the characters outside the window satisfy the required frequency (i.e., none of the characters are overrepresented anymore).
+
+##### ⏱ Time Complexity: O(n)
+
+##### 🔍 Java Code
+
+```java
+class Solution {
+    public int balancedString(String s) {
+        int n = s.length();
+        int requiredFreq = n / 4;
+        int[] count = new int[128];
+
+        for (char c : s.toCharArray()) {
+            count[c]++;
+        }
+
+        if (count['Q'] == requiredFreq && count['W'] == requiredFreq &&
+            count['E'] == requiredFreq && count['R'] == requiredFreq) {
+            return 0;
+        }
+
+        int left = 0, right = 0, minLen = n;
+
+        while (right < n) {
+            count[s.charAt(right)]--;
+
+            while (left <= right &&
+                   count['Q'] <= requiredFreq &&
+                   count['W'] <= requiredFreq &&
+                   count['E'] <= requiredFreq &&
+                   count['R'] <= requiredFreq) {
+                minLen = Math.min(minLen, right - left + 1);
+                count[s.charAt(left)]++;
+                left++;
+            }
+
+            right++;
+        }
+
+        return minLen;
+    }
+}
+
+```
+---

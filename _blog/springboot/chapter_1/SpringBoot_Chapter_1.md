@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SpringBoot Chapter 1 : Folder Structure, POM & Building Hello World Application"
+title: "SpringBoot Chapter 1 : Folder Structure, POM & Hello World Application"
 slug: "springboot-chapter-1"
 date: 2025-06-09
 author: Anubhav Srivastava

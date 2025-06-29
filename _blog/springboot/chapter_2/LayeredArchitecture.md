@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Layered Architecture Design Pattern in SpringBoot"
+title: "SpringBoot Chapter 2 : Layered Architecture Design Pattern in SpringBoot"
 slug: "layered-architecture-pattern"
 date: 2025-06-29
 author: Anubhav Srivastava

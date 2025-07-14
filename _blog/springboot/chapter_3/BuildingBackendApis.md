@@ -261,6 +261,7 @@ public class TodoController {
     }
 }
 ```
+
 | Annotation        | Applied On     | Description                                                            |
 | ----------------- | -------------- | ---------------------------------------------------------------------- |
 | `@RestController` | Class          | [Combines `@Controller` + `@ResponseBody`. Used for REST APIs](https://www.baeldung.com/spring-controller-vs-restcontroller)          |
@@ -274,7 +275,9 @@ public class TodoController {
 | `@RequestParam`   | Method Param   | Binds query parameters to method parameters                            |
 | `@RequestBody`    | Method Param   | Maps JSON payload from request body to a Java object                   |
 
-**What is [ResponseEntity<T>?](https://www.baeldung.com/spring-response-entity)**
+
+> [ What is ResponseEntity<T>?](https://www.baeldung.com/spring-response-entity)
+
 ```markdown
 ResponseEntity<T> is a wrapper in Spring that allows for customization of the full HTTP response — not just the body, but also:
 

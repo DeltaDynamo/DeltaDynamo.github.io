@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Software Engineering Insights
+title: Software Engineering Wisdom
 ---
 
 <ul>

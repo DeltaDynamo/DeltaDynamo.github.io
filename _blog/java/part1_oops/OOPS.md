@@ -347,7 +347,7 @@ c.honk();   // Specific to Car
 #### 📘 Example:
 
 ```java
-class Engine extends IEngine {
+class Engine implements IEngine {
     void startEngine() {
         System.out.println("Engine starting...");
     }

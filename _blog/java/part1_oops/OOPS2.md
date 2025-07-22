@@ -18,7 +18,7 @@ Let’s break them down intuitively.
 
 ---
 
-### 🏠 Local Classes – “A Class Inside a Method”
+### 🏠 1. Local Classes – “A Class Inside a Method”
 
 #### 🔍 What is a Local Class?
 
@@ -82,7 +82,7 @@ public class Printer {
 
 ---
 
-### 👻 Anonymous Classes – “Class Without a Name”
+### 👻 2. Anonymous Classes – “Class Without a Name”
 
 #### 🔍 What is an Anonymous Class?
 

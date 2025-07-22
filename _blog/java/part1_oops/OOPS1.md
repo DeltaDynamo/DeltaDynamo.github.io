@@ -284,7 +284,7 @@ public class Test {
 
 ---
 
-## 🧩 Interface vs Abstract Class in Java
+## 🧩 5. Interface vs Abstract Class in Java
 
 ### 🧠 Intuition
 
@@ -394,7 +394,7 @@ class Dog extends Animal {
 
 ---
 
-## ⚔️ Composition vs Inheritance in Java: The Great Design Battle
+## ⚔️ 6. Composition vs Inheritance in Java: The Great Design Battle
 
 ### 🧠 Intuition
 
@@ -505,7 +505,7 @@ car.start(); // Engine starting...
 
 ---
 
-## 🔁 Object Equality in Java : equals() and hashCode()
+## 🔁 7. Object Equality in Java : equals() and hashCode()
 
 When working with Java objects—especially in collections like `HashMap`, `HashSet`, or `Hashtable`—the way Java compares objects under the hood heavily depends on `equals()` and `hashCode()`.
 
@@ -701,3 +701,4 @@ Because `hashCode()` has changed, and the set can't find the object anymore.
 
 ---
 
+> **Next Post in this series :** [Core Java Part 1 : Object Oriented Principles (Local & Anonymous Classes)](https://deltadynamo.github.io/blog/core-java-1-oops-local-anonymous-classes/)

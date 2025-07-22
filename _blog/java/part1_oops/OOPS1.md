@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Core Java Part 1 : Object Oriented Principles"
-slug: "core-java-1-oops"
+title: "Core Java Part 1 : Object Oriented Principles (Four Pillars & Object Equality)"
+slug: "core-java-1-oops-four-pillars"
 date: 2025-07-20
 author: Anubhav Srivastava
 tags: [core java, object oriented programming]
@@ -284,113 +284,6 @@ public class Test {
 
 ---
 
-## ⚔️ Composition vs Inheritance in Java: The Great Design Battle
-
-### 🧠 Intuition
-
-> Inheritance says: “I AM a type of X.”
-> Composition says: “I HAVE a X.”
-
-Imagine a **Car**:
-
-* Inheritance: `Car extends Vehicle` → a car *is* a vehicle.
-* Composition: `Car has an Engine` → a car *has* an engine.
-
----
-
-### 🧬 Inheritance
-
-#### ✅ When to Use:
-
-* There's a clear **IS-A** relationship.
-* We want to **reuse and override** behavior.
-* We want polymorphism between parent and child.
-
-#### 📘 Example:
-
-```java
-class Vehicle {
-    void start() {
-        System.out.println("Vehicle starting");
-    }
-}
-
-class Car extends Vehicle {
-    void honk() {
-        System.out.println("Car honking");
-    }
-}
-```
-
-```java
-Car c = new Car();
-c.start();  // Inherited
-c.honk();   // Specific to Car
-```
-
-#### ⚠️ Pitfalls:
-
-* **Tight coupling**: Subclass depends on superclass structure.
-* **Breaks with change**: A small change in parent might affect all children.
-* Inherits **everything**, even what we don’t need.
-
----
-
-### 🧱 Composition
-
-#### ✅ When to Use:
-
-* We need **flexibility** and **loose coupling**.
-* There is a **HAS-A** relationship.
-* We want to **change behavior at runtime** or **prefer delegation**.
-
-#### 📘 Example:
-
-```java
-class Engine implements IEngine {
-    void startEngine() {
-        System.out.println("Engine starting...");
-    }
-}
-
-class Car {
-    private IEngine engine = new Engine(); // HAS-A
-
-    void start() {
-        engine.startEngine(); // Delegation
-    }
-}
-```
-
-```java
-Car car = new Car();
-car.start(); // Engine starting...
-```
-
-#### ✅ Benefits:
-
-* More flexible and testable
-* We can compose behavior from multiple classes
-* Encourages code reuse **without tight hierarchy**
-
----
-
-### 🤔 When to Use What?
-
-| Criteria                | Inheritance                | Composition               |
-| ----------------------- | -------------------------- | ------------------------- |
-| Relationship            | IS-A                       | HAS-A                     |
-| Coupling                | Tight                      | Loose                     |
-| Reusability             | Reuse with constraints     | Reuse with freedom        |
-| Flexibility             | Less flexible              | Very flexible             |
-| Runtime Behavior Change | Hard                       | Easy                      |
-| Preferred in Design     | Rarely (favor composition) | ✅ Preferred in modern OOP |
-
-> ☑️ **Rule of Thumb**:
-> "Favor composition over inheritance" — Effective Java (Joshua Bloch)
-
----
-
 ## 🧩 Interface vs Abstract Class in Java
 
 ### 🧠 Intuition
@@ -489,7 +382,6 @@ class Dog extends Animal {
 | When to Use           | Capability (“can do”)                  | Blueprint with behavior     |
 | Example               | Flyable, Runnable                      | Animal, Shape               |
 
----
 
 ### 🎯 When to Use Interface vs Abstract Class?
 
@@ -502,189 +394,118 @@ class Dog extends Animal {
 
 ---
 
-## 🧠 Local & Anonymous Classes in Java
+## ⚔️ Composition vs Inheritance in Java: The Great Design Battle
 
-In Java, classes can be declared not just at the top-level, but also **inside methods**. These are called **local** and **anonymous** classes. Both are types of **inner classes**, and they are typically used when the class is:
+### 🧠 Intuition
 
-* Used only within a specific scope
-* Needed for a **short-lived**, specialized behavior
+> Inheritance says: “I AM a type of X.”
+> Composition says: “I HAVE a X.”
 
-Let’s break them down intuitively.
+Imagine a **Car**:
+
+* Inheritance: `Car extends Vehicle` → a car *is* a vehicle.
+* Composition: `Car has an Engine` → a car *has* an engine.
 
 ---
 
-### 🏠 Local Classes – “A Class Inside a Method”
+### 🧬 Inheritance
 
-#### 🔍 What is a Local Class?
+#### ✅ When to Use:
 
-A **Local Class** is a class defined **inside a method**, like a helper that exists only **within that method's body**.
-
-#### 🧠 Intuition
-
-> Think of a chef (method) who defines a **recipe (class)** only for this evening’s dish. Tomorrow, it’s gone. No need to make it global.
+* There's a clear **IS-A** relationship.
+* We want to **reuse and override** behavior.
+* We want polymorphism between parent and child.
 
 #### 📘 Example:
 
 ```java
-public class Hotel {
-    public void serveDish() {
-        class Recipe {
-            void prepare() {
-                System.out.println("Cooking secret pasta recipe...");
-            }
-        }
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle starting");
+    }
+}
 
-        Recipe r = new Recipe();
-        r.prepare();
+class Car extends Vehicle {
+    void honk() {
+        System.out.println("Car honking");
     }
 }
 ```
 
 ```java
-Hotel h = new Hotel();
-h.serveDish();  // Output: Cooking secret pasta recipe...
+Car c = new Car();
+c.start();  // Inherited
+c.honk();   // Specific to Car
 ```
 
-#### ✅ Key Points:
+#### ⚠️ Pitfalls:
 
-* Can **access final or effectively final variables** from the enclosing method.
-* Has a **name**.
-* Exists **only inside the method**—cannot be used elsewhere.
-* Supports **constructors**, fields, and methods.
+* **Tight coupling**: Subclass depends on superclass structure.
+* **Breaks with change**: A small change in parent might affect all children.
+* Inherits **everything**, even what we don’t need.
 
 ---
 
-### 🧪 Example with Local Variables:
+### 🧱 Composition
+
+#### ✅ When to Use:
+
+* We need **flexibility** and **loose coupling**.
+* There is a **HAS-A** relationship.
+* We want to **change behavior at runtime** or **prefer delegation**.
+
+#### 📘 Example:
 
 ```java
-public class Printer {
-    public void printMessage(String msg) {
-        int copies = 3; // Effectively final
+interface IEngine {
+    void startEngine();
+}
 
-        class MessagePrinter {
-            void print() {
-                for (int i = 0; i < copies; i++) {
-                    System.out.println(msg);
-                }
-            }
-        }
+class Engine implements IEngine {
+    void startEngine() {
+        System.out.println("Engine starting...");
+    }
+}
 
-        MessagePrinter printer = new MessagePrinter();
-        printer.print();
+class Car {
+    private IEngine engine = new Engine(); // HAS-A
+
+    void start() {
+        engine.startEngine(); // Delegation
     }
 }
 ```
 
----
+```java
+Car car = new Car();
+car.start(); // Engine starting...
+```
 
-### 👻 Anonymous Classes – “Class Without a Name”
+#### ✅ Benefits:
 
-#### 🔍 What is an Anonymous Class?
-
-An **Anonymous Class** is a **one-time-use subclass or implementation**, created **on the fly**, **without naming it**.
-
-#### 🧠 Intuition
-
-> We need a **temporary worker** to do a specific task today We don't name them, we just say, “Hey, You! Do this now.”
-
-They’re often used to **implement interfaces or abstract classes on the spot**—especially useful with GUI callbacks or threads.
+* More flexible and testable
+* We can compose behavior from multiple classes
+* Encourages code reuse **without tight hierarchy**
 
 ---
 
-#### 📘 Example: Anonymous Class with Interface
+### 🤔 When to Use What?
 
-```java
-interface Greetable {
-    void greet();
-}
+| Criteria                | Inheritance                | Composition               |
+| ----------------------- | -------------------------- | ------------------------- |
+| Relationship            | IS-A                       | HAS-A                     |
+| Coupling                | Tight                      | Loose                     |
+| Reusability             | Reuse with constraints     | Reuse with freedom        |
+| Flexibility             | Less flexible              | Very flexible             |
+| Runtime Behavior Change | Hard                       | Easy                      |
+| Preferred in Design     | Rarely (favor composition) | ✅ Preferred in modern OOP |
 
-public class Greeter {
-    public void greetSomeone() {
-        Greetable g = new Greetable() {
-            public void greet() {
-                System.out.println("Hello from an anonymous class!");
-            }
-        };
-
-        g.greet();
-    }
-}
-```
+> ☑️ **Rule of Thumb**:
+> "Favor composition over inheritance" — Effective Java (Joshua Bloch)
 
 ---
 
-#### 📘 Example: Anonymous Thread
-
-```java
-public class Task {
-    public static void main(String[] args) {
-        Thread t = new Thread() {
-            public void run() {
-                System.out.println("Thread running anonymously");
-            }
-        };
-        t.start();
-    }
-}
-```
-
-Or with `Runnable` interface:
-
-```java
-Thread t = new Thread(new Runnable() {
-    public void run() {
-        System.out.println("Runnable running anonymously");
-    }
-});
-t.start();
-```
-
----
-
-### 🔍 Local vs Anonymous Class – Key Differences
-
-| Feature                  | Local Class                | Anonymous Class                         |
-| ------------------------ | -------------------------- | --------------------------------------- |
-| Has a name?              | ✅ Yes                      | ❌ No (hence "anonymous")                |
-| Can define constructors? | ✅ Yes                      | ❌ No (uses initializer block)           |
-| Can extend class?        | ✅ Yes                      | ✅ Yes (but only one)                    |
-| Can implement interface? | ✅ Yes                      | ✅ Yes (but only one)                    |
-| Typical usage            | Helper class in method     | One-off implementation (e.g. callbacks) |
-| Reusability              | 🟡 Limited (within method) | ❌ None – single-use                     |
-
-
-### 💡 Real-Life Usage Examples
-
-#### ✅ GUI Programming (Pre-Lambda Java)
-
-```java
-button.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent e) {
-        System.out.println("Button clicked!");
-    }
-});
-```
-
-#### ✅ Sorting with Comparator
-
-```java
-List<String> list = Arrays.asList("dog", "cat", "elephant");
-
-Collections.sort(list, new Comparator<String>() {
-    public int compare(String s1, String s2) {
-        return s1.length() - s2.length();
-    }
-});
-```
-
-#### 🧠 How to use?
-
-* Use **Local Classes** when you want a helper class scoped to a method, and you **may need to reuse** it **within that method**.
-* Use **Anonymous Classes** when you need a **quick, one-time-use class**, especially for **implementing interfaces or overriding methods inline**.
-
----
-
-## 🔁 equals() and hashCode() in Java
+## 🔁 Object Equality in Java : equals() and hashCode()
 
 When working with Java objects—especially in collections like `HashMap`, `HashSet`, or `Hashtable`—the way Java compares objects under the hood heavily depends on `equals()` and `hashCode()`.
 

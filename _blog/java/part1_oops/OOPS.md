@@ -347,14 +347,14 @@ c.honk();   // Specific to Car
 #### 📘 Example:
 
 ```java
-class Engine {
+class Engine extends IEngine {
     void startEngine() {
         System.out.println("Engine starting...");
     }
 }
 
 class Car {
-    private Engine engine = new Engine(); // HAS-A
+    private IEngine engine = new Engine(); // HAS-A
 
     void start() {
         engine.startEngine(); // Delegation

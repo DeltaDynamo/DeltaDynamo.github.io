@@ -197,8 +197,8 @@ Abstraction means:
 
 #### ✅ Achieved in Java using:
 
-* **Abstract classes**
-* **Interfaces**
+* **Abstract classes** (Partial Abstraction) 
+* **Interfaces** (100% Abstraction) 
 
 
 #### 📘 Abstract Class Example:
@@ -499,12 +499,6 @@ class Dog extends Animal {
 | We want to share state/data across subclasses   | Abstract  |
 | Our class hierarchy is tightly related          | Abstract  |
 | We just want to enforce behavior (API contract) | Interface |
-
----
-
-Absolutely! Let’s demystify **Local Classes** and **Anonymous Classes** in Java.
-
-These two are often overlooked, but they’re incredibly powerful tools for writing **clean, concise**, and sometimes **context-sensitive** code—especially in event-driven or functional-style programming.
 
 ---
 

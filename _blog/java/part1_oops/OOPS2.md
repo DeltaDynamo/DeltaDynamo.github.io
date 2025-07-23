@@ -188,3 +188,114 @@ Collections.sort(list, new Comparator<String>() {
 * Use **Anonymous Classes** when you need a **quick, one-time-use class**, especially for **implementing interfaces or overriding methods inline**.
 
 ---
+
+### 🔍 What Can Local and Anonymous Classes Access in Java?
+
+When working with **local or anonymous classes**, a common question is:
+
+> **"What variables can they access from their surrounding context?"**
+
+Let’s break it down clearly — with examples and practical reasoning.
+
+---
+
+#### ✅ 1. **Instance Variables of the Enclosing Class**
+
+Local/anonymous classes can access non-static fields of the enclosing class directly — even if they’re `private`.
+
+```java
+class Outer {
+    private int value = 42;
+
+    public void show() {
+        Runnable r = new Runnable() {
+            public void run() {
+                System.out.println(value); // ✅ Accesses instance variable
+            }
+        };
+        r.run();
+    }
+}
+```
+
+**Why it works:**
+The inner class keeps an **implicit reference** to the outer class (`Outer.this`), so it can freely access its fields.
+
+---
+
+#### ✅ 2. **Static Variables of the Enclosing Class**
+
+They can also access static fields of the outer class without issue.
+
+```java
+class Outer {
+    private static String label = "Static Value";
+
+    public void show() {
+        Runnable r = () -> System.out.println(label); // ✅ Allowed
+        r.run();
+    }
+}
+```
+
+**Why it works:**
+Static fields belong to the class, not the instance — so they’re always accessible once the class is loaded.
+
+---
+
+### ✅ 3. **Final or Effectively Final Local Variables**
+
+This is the most important (and often misunderstood) rule:
+
+```java
+void printMessage() {
+    String message = "Hello"; // effectively final
+
+    Runnable r = () -> System.out.println(message); // ✅ Allowed
+    r.run();
+}
+```
+
+If we try to **change `message` later**, it will no longer be "effectively final" and cause a compile-time error:
+
+```java
+message = "Hi"; // ❌ Now 'message' is no longer effectively final
+```
+
+**Why this restriction?**
+Java captures the value at the time the inner class is created. It **copies** the value into a hidden field. If the variable kept changing afterward, this would lead to inconsistent or confusing behavior — so Java forbids it.
+
+---
+
+#### ✅ 4. **Final or Effectively Final Method Parameters**
+
+Parameters behave just like local variables.
+
+```java
+void greet(String name) {
+    Runnable r = () -> System.out.println("Hello, " + name); // ✅ OK
+    r.run();
+}
+```
+
+If we try to modify `name`, we'll break the "effectively final" rule and get a compile error.
+
+#### 🧠 Summary Table
+
+| Variable Type                        | Accessible? | Reason                                       |
+| ------------------------------------ | ----------- | -------------------------------------------- |
+| Instance variable of outer class     | ✅ Yes       | Lives in the heap; inner class has reference |
+| Static variable of outer class       | ✅ Yes       | Always available via class                   |
+| Final or effectively final local var | ✅ Yes       | Safely captured at compile time              |
+| Non-final local var                  | ❌ No        | Risk of inconsistency                        |
+| Final/effectively final parameter    | ✅ Yes       | Same rule as local vars                      |
+| Reassigned parameter                 | ❌ No        | No longer effectively final                  |
+
+
+🧩 **Quick Tip:**
+If ever unsure why a variable isn't accessible in a lambda or anonymous class, we should ask ourself:
+
+> *"Is this variable guaranteed to stay the same after it's used?"*
+> If **yes**, it’s probably effectively final. If not — Java will block it.
+
+---

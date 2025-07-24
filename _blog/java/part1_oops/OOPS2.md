@@ -94,7 +94,7 @@ An **Anonymous Class** is a **one-time-use subclass or implementation**, created
 
 They’re often used to **implement interfaces or abstract classes on the spot**—especially useful with GUI callbacks or threads.
 
-In Java, an anonymous class must either implement an interface or extend a class—it cannot stand completely on its own. This is because anonymous classes are essentially one-time, unnamed subclasses or implementations created inline. You can't declare an anonymous class without a base type, as Java requires a known type to define the structure and contract of the anonymous object. So even though the resulting class is anonymous (i.e., has no name in your source code), it still needs to either extend a class (like Object) or implement an interface (like Runnable) to be valid-
+In Java, an anonymous class must either implement an interface or extend a class—it cannot stand completely on its own. This is because anonymous classes are essentially one-time, unnamed subclasses or implementations created inline. You can't declare an anonymous class without a base type, as Java requires a known type to define the structure and contract of the anonymous object. So even though the resulting class is anonymous (i.e., has no name in our source code), it still needs to either extend a class (like Object) or implement an interface (like Runnable) to be valid. 
 
 ---
 

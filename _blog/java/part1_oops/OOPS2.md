@@ -5,6 +5,7 @@ slug: "core-java-1-oops-local-anonymous-classes"
 date: 2025-07-21
 author: Anubhav Srivastava
 tags: [core java, object oriented programming]
+version: 1.0
 ---
 
 ## 🧠 Local & Anonymous Classes in Java
@@ -54,7 +55,7 @@ h.serveDish();  // Output: Cooking secret pasta recipe...
 
 * Can **access final or effectively final variables** from the enclosing method.
 * Has a **name**.
-* Exists **only inside the method**—cannot be used elsewhere.
+* Exists **only inside the method**-cannot be used elsewhere.
 * Supports **constructors**, fields, and methods.
 
 ---
@@ -92,9 +93,9 @@ An **Anonymous Class** is a **one-time-use subclass or implementation**, created
 
 > We need a **temporary worker** to do a specific task today We don't name them, we just say, “Hey, You! Do this now.”
 
-They’re often used to **implement interfaces or abstract classes on the spot**—especially useful with GUI callbacks or threads.
+They’re often used to **implement interfaces or abstract classes on the spot**-especially useful with GUI callbacks or threads.
 
-In Java, an anonymous class must either implement an interface or extend a class—it cannot stand completely on its own. This is because anonymous classes are essentially one-time, unnamed subclasses or implementations created inline. You can't declare an anonymous class without a base type, as Java requires a known type to define the structure and contract of the anonymous object. So even though the resulting class is anonymous (i.e., has no name in our source code), it still needs to either extend a class (like Object) or implement an interface (like Runnable) to be valid. 
+In Java, an anonymous class must either implement an interface or extend a class-it cannot stand completely on its own. This is because anonymous classes are essentially one-time, unnamed subclasses or implementations created inline. You can't declare an anonymous class without a base type, as Java requires a known type to define the structure and contract of the anonymous object. So even though the resulting class is anonymous (i.e., has no name in our source code), it still needs to either extend a class (like Object) or implement an interface (like Runnable) to be valid. 
 
 ---
 
@@ -197,13 +198,13 @@ When working with **local or anonymous classes**, a common question is:
 
 > **"What variables can they access from their surrounding context?"**
 
-Let’s break it down clearly — with examples and practical reasoning.
+Let’s break it down clearly - with examples and practical reasoning.
 
 ---
 
 #### ✅ 1. **Instance Variables of the Enclosing Class**
 
-Local/anonymous classes can access non-static fields of the enclosing class directly — even if they’re `private`.
+Local/anonymous classes can access non-static fields of the enclosing class directly - even if they’re `private`.
 
 ```java
 class Outer {
@@ -241,7 +242,7 @@ class Outer {
 ```
 
 **Why it works:**
-Static fields belong to the class, not the instance — so they’re always accessible once the class is loaded.
+Static fields belong to the class, not the instance - so they’re always accessible once the class is loaded.
 
 ---
 
@@ -265,7 +266,7 @@ message = "Hi"; // ❌ Now 'message' is no longer effectively final
 ```
 
 **Why this restriction?**
-Java captures the value at the time the inner class is created. It **copies** the value into a hidden field. If the variable kept changing afterward, this would lead to inconsistent or confusing behavior — so Java forbids it.
+Java captures the value at the time the inner class is created. It **copies** the value into a hidden field. If the variable kept changing afterward, this would lead to inconsistent or confusing behavior - so Java forbids it.
 
 ---
 
@@ -298,6 +299,6 @@ If we try to modify `name`, we'll break the "effectively final" rule and get a c
 If ever unsure why a variable isn't accessible in a lambda or anonymous class, we should ask ourself:
 
 > *"Is this variable guaranteed to stay the same after it's used?"*
-> If **yes**, it’s probably effectively final. If not — Java will block it.
+> If **yes**, it’s probably effectively final. If not - Java will block it.
 
 ---

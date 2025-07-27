@@ -5,11 +5,12 @@ slug: "core-java-1-oops-four-pillars"
 date: 2025-07-20
 author: Anubhav Srivastava
 tags: [core java, object oriented programming]
+version: 1.0
 ---
 
 ## 🧠 Object Oriented Programming Basics : Polymorphism, Encapsulation, Inheritance & Abstraction
 
-Object-Oriented Programming (OOP) is not just a paradigm—it’s a mindset. To write clean, reusable, and scalable code in Java, we must **internalize** the four key pillars of OOP:
+Object-Oriented Programming (OOP) is not just a paradigm - it’s a mindset. To write clean, reusable, and scalable code in Java, we must **internalize** the four key pillars of OOP:
 
 ---
 
@@ -19,7 +20,7 @@ Object-Oriented Programming (OOP) is not just a paradigm—it’s a mindset. To 
 
 > Imagine we press a “Play” button. On a music player, it plays music. On a video player, it plays a movie. On a game, it starts the level.
 > One button, many behaviors.
-> This is **Polymorphism**—from the Greek words "poly" (many) and "morph" (forms).
+> This is **Polymorphism** - from the Greek words "poly" (many) and "morph" (forms).
 
 In Java, **polymorphism allows us to treat different types of objects in the same way**, while letting them behave differently.
 
@@ -97,7 +98,7 @@ public class Test {
 
 #### 🧠 Intuition
 
-> Think of a **coffee machine**. We push a button to get coffee, but the internal wiring, boiling process, pressure systems—all are hidden.
+> Think of a **coffee machine**. We push a button to get coffee, but the internal wiring, boiling process, pressure systems - all are hidden.
 > We don’t need to know how it works to use it. That’s **encapsulation**.
 
 In Java, **encapsulation is about hiding internal data and exposing only what’s necessary while providing controlled access to the internal state of an object** using:
@@ -140,7 +141,7 @@ class BankAccount {
 
 #### 🧠 Intuition
 
-> We inherit traits from our parents—like eye color or height.
+> We inherit traits from our parents - like eye color or height.
 > Similarly, a Java class can **inherit fields and methods from another**.
 
 Inheritance enables:
@@ -269,7 +270,7 @@ public class Test {
 }
 ```
 
-> The caller doesn’t care how flying is done—it just knows each object can `fly()`.
+> The caller doesn’t care how flying is done - it just knows each object can `fly()`.
 
 ---
 
@@ -501,13 +502,13 @@ car.start(); // Engine starting...
 | Preferred in Design     | Rarely (favor composition) | ✅ Preferred in modern OOP |
 
 > ☑️ **Rule of Thumb**:
-> "Favor composition over inheritance" — Effective Java (Joshua Bloch)
+> "Favor composition over inheritance" - Effective Java (Joshua Bloch)
 
 ---
 
 ## 🔁 7. Object Equality in Java : equals() and hashCode()
 
-When working with Java objects—especially in collections like `HashMap`, `HashSet`, or `Hashtable`—the way Java compares objects under the hood heavily depends on `equals()` and `hashCode()`.
+When working with Java objects - especially in collections like `HashMap`, `HashSet`, or `Hashtable` - the way Java compares objects under the hood heavily depends on `equals()` and `hashCode()`.
 
 If these two methods aren’t properly understood or implemented, we may face strange bugs like:
 

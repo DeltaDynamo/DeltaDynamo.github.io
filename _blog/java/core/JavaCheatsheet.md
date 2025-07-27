@@ -5,6 +5,7 @@ slug: "core-java-cheatsheet"
 date: 2025-07-25
 author: Anubhav Srivastava
 tags: [core java, terminologies]
+version: 1.0
 ---
 
 ## Key Java Terms and Concepts
@@ -237,28 +238,104 @@ void addIntegers(List<? super Integer> list) {
 
 #### ✅ 5. `static` keyword
 
-> The `static` keyword marks members (fields, methods, blocks, or nested classes) as belonging to the **class itself** rather than to any instance. Static members are shared across all instances of the class.
+> The static keyword is used to define class-level members - i.e. fields, methods, blocks, and nested classes. These members are shared across all instances of the class and can be accessed without creating an object. Static members belong to the class itself, not to any particular instance.
 
-**Syntax & Example**:
+**Example 1. Static Field**
+
+A static field is shared by all instances of a class. It’s typically used for constants or to maintain class-level state.
 
 ```java
-class Utility {
-    static int count = 0;
-    static void increment() { count++; }
-}
+class Counter {
+    static int count = 0; // shared across all instances
 
-Utility.increment();
-System.out.println(Utility.count); // Output: 1
+    Counter() {
+        count++; // increments shared count
+    }
+}
 ```
+
+* Accessed using class name: `Counter.count`
+* Useful for constants or counters.
+* Memory is allocated once in the class loading phase.
+
+**Example 2. Static Method**
+
+> A static method belongs to the class and can be called without creating an object. It cannot access instance variables or methods directly.
+
+```java
+class MathUtils {
+    static int square(int x) {
+        return x * x;
+    }
+}
+```
+
+* Called like: `MathUtils.square(5)`
+* Can only access other static members directly.
+* Often used for utility methods (e.g., `Collections.sort()`, `Math.max()`).
+
+| 🔍 **Why static methods can't access non-static members**                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
+| • Static methods do not have access to `this`.                                                                                           |
+| • Non-static fields and methods need an object to exist, so they need `this` reference.                                                  |
+| • Since static methods are not tied to any particular object, there's no way to know which object's non-static member we want to access. |
+| • This preserves a clear boundary between class-level logic and object-level data.                                                       |
+
+
+**Example 3. Static Block**
+
+> A static block runs **once** when the class is loaded by the JVM. It's used to initialize static variables or perform setup logic.
+
+```java
+class Config {
+    static String DB_URL;
+
+    static {
+        DB_URL = "jdbc:mysql://localhost";
+        System.out.println("Static block executed");
+    }
+}
+```
+
+* Executes once when the class is first loaded (even before `main()`).
+* Cannot be inside methods or constructors.
+* Multiple static blocks are allowed and run **in order of appearance**.
+* Used for loading config, initializing static resources, or registering drivers.
+
+**Example 4. Static Nested Class**
+
+> A static class declared inside another class does not require an instance of the outer class.
+
+```java
+class Outer {
+    static class Nested {
+        void greet() {
+            System.out.println("Hello from static nested class");
+        }
+    }
+}
+```
+
+* Accessed like: `Outer.Nested nested = new Outer.Nested();`
+* Cannot access non-static members of the outer class.
+* Often used to group helper classes.
 
 **Usage & Caveats**:
 
-* Used for **utility methods**, **shared constants**, and **counters**
-* Static methods **cannot access instance members** directly (`this` and `super` are not allowed)
-* Static blocks are used for **class-level initialization**
-* A `static` nested class does not have a reference to its outer class instance
-* Static fields are initialized **once per classloader**, not per instance
-* Overriding static methods is **method hiding**, not polymorphism
+* Static fields are memory-efficient and shared globally, but care is needed in multithreaded environments.
+* Static methods can't access `this` or instance members directly.
+* Static blocks help in initializing static state, but must be short and predictable.
+* Static methods are not polymorphic [(they support **method hiding**, not overriding)](https://docs.oracle.com/javase/tutorial/java/IandI/override.html).
+* Overusing static can lead to **tight coupling** and reduce testability.
+* Static classes are commonly used in enums, utility libraries, and singleton patterns.
+
+**Since**: Java 1.0
+
+**Memory/Performance**:
+
+* Static members are stored in **method area** (not heap).
+* Fast access, low memory footprint when used properly.
+* Can create bottlenecks if static fields are **mutable and shared across threads**.
 
 ---
 

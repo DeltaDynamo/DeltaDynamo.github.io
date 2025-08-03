@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Software Engineering Wisdom
+title: Blog
 ---
 
 <ul>

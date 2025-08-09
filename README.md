@@ -13,7 +13,7 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 ---
 
-## 🏆 Professional Experience
+## 💼 Professional Experience
 
 ### 🧑‍💻 Software Engineer @ Tata Consultancy Services • 📅 October 2023 – Present  
  

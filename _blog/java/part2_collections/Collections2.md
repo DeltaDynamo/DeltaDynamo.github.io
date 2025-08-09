@@ -8,7 +8,6 @@ tags: [core java, collections framework, hashmap, hashset]
 version: 1.0
 ---
 
-### 📑 Table of Contents
 {:toc}
 
 ---

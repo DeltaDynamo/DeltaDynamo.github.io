@@ -8,7 +8,6 @@ tags: [core java, collections framework, arraylist, linkedlist]
 version: 1.0
 ---
 
-### 📑 Table of Contents
 {:toc}
 
 ---

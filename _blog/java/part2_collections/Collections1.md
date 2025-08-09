@@ -8,6 +8,7 @@ tags: [core java, collections framework, arraylist, linkedlist]
 version: 1.0
 ---
 
+* TOC
 {:toc}
 
 ---

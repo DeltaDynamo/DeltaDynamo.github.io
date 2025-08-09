@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Part 2 : Collections Framework Introduction ArrayList & LinkedList"
+title: "Core Java Part 2 : Collections Framework Introduction, ArrayList & LinkedList"
 slug: "core-java-2-collections-framework-intro-list"
 date: 2025-08-07
 author: Anubhav Srivastava
@@ -15,7 +15,7 @@ version: 1.0
 
 #### 🌲1.1 Java Collections Hierarchy Diagram
 
-```java
+```markdown
 java.lang.Object
     └── java.lang.Iterable<T>  ← ROOT of Collections Framework
           └── java.util.Collection<T>

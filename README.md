@@ -1,4 +1,5 @@
-Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus on **Backend Development**. While my expertise lies in building robust and scalable backend systems, I also have a bit of hands on in **Frontend Development**, which allows me to contribute across the full stack. I always aim to create efficient, maintainable solutions that deliver value. I’m passionate about solving challenging problems and optimizing code for better performance. I also enjoy contributing to open-source projects and build my own in my spare time.
+Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus on **Backend Development**. While my expertise lies in building robust, secure and scalable backend systems, I also have a bit of hands on in **Frontend Development**, which allows me to contribute across the full stack. 
+I am driven to tackle challenging business problems and craft efficient, maintainable solutions that deliver lasting value and measurable impact to the business. I also enjoy contributing to open-source projects and build my own in my spare time.
 
 ---
 
@@ -13,14 +14,15 @@ Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus
 
 ## 🏆 Professional Experience
 
-### Software Engineer • **Tata Consultancy Services**
- 📅 *October 2023 – Present*  
+### Software Engineer • *Tata Consultancy Services*
+📅 October 2023 – Present  
  
-  - Designed and implemented **robust and resilient APIs** that support the product’s core functionality.  
-  - Refactored and optimized existing codebase to **enhance performance** and maintainability.  
-  - Collaborated with cross-functional teams to integrate new features and improve overall system efficiency.  
+> *I am part of the Core Product Development Team for a core banking software suite, where I design, develop, and optimize backend services and modules critical to business operations.*
 
-💡 Committed to delivering efficient, scalable, and high-quality engineering solutions that drive business success.  
+1️⃣ ***Designed and developed core backend modules*** for the banking engine, including components handling financial calculations and core business logic.
+2️⃣ Optimized multiple services, ***improving execution time by ~20% through performance tuning, service refactoring, and efficient data access patterns.***
+3️⃣ Refactored legacy DAO layers to streamline queries and enhance data retrieval efficiency across services.
+4️⃣ Collaborated with cross-functional teams to plan, implement, and deliver product-aligned features.
 
 ---
 

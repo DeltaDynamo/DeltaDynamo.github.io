@@ -15,14 +15,17 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 ## 🏆 Professional Experience
 
-### Software Engineer @ Tata Consultancy Services • 📅 October 2023 – Present  
+### 🧑‍💻 Software Engineer @ Tata Consultancy Services • 📅 October 2023 – Present  
  
 > I am part of the Core Product Development Team for a core banking software suite, where I design, develop, and optimize backend services and modules critical to business operations.
 
-* 1️⃣ ***Designed and developed core backend modules*** for the banking engine, including components handling financial calculations and core business logic.
-* 2️⃣ Optimized multiple services, ***improving execution time by ~20% through performance tuning, service refactoring, and efficient data access patterns.***
-* 3️⃣ Refactored legacy DAO layers to streamline queries and enhance data retrieval efficiency across services.
-* 4️⃣ Collaborated with cross-functional teams to plan, implement, and deliver product-aligned features.
+1️⃣ ***Designed and developed core backend modules*** for the banking engine, including components handling financial calculations and core business logic.
+
+2️⃣ Optimized multiple services, ***improving execution time by ~20% through performance tuning, service refactoring, and efficient data access patterns.***
+
+3️⃣ Refactored legacy DAO layers to streamline queries and enhance data retrieval efficiency across services.
+
+4️⃣ Collaborated with cross-functional teams to plan, implement, and deliver product-aligned features.
 
 ---
 

@@ -4,7 +4,7 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 ---
 
-## 💻 Skills
+## ⚡ Skills
 <div align="center">
   <a href="https://deltadynamo.github.io/">
     <img src="https://skillicons.dev/icons?i=java,spring,mysql,mongodb,aws,maven,eclipse,postman,js,ts,nodejs,express,vscode,jest,git,react&perline=8" alt="MySkills" />
@@ -13,7 +13,7 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 ---
 
-## 💼 Professional Experience
+## 🖥️ Professional Experience
 
 ### 🧑‍💻 Software Engineer @ Tata Consultancy Services • 📅 October 2023 – Present  
  
@@ -29,7 +29,7 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 ---
 
-## 🔧 Open Source Contributions
+## 🌟 Open Source Contributions
 ### [OpenLogo](https://github.com/TeamShiksha/openlogo/pulls?q=is%3Apr+assignee%3ADeltaDynamo+is%3Aclosed)
 
 | **Major Contributions**                                                                                     | **PR**                                                        |

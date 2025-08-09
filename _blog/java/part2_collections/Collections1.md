@@ -8,12 +8,17 @@ tags: [core java, collections framework, arraylist, linkedlist]
 version: 1.0
 ---
 
-### 📚 1. Java Collections Framework
+### 📑 Table of Contents
+{:toc}
+
+---
+
+## 📚 1. Java Collections Framework
 
 > The Java Collections Framework is a **core part of the Java language** that provides a standard architecture to store, retrieve, and manipulate groups of objects.
 
 
-#### 🌲1.1 Java Collections Hierarchy Diagram
+### 🌲1.1 Java Collections Hierarchy Diagram
 
 ```markdown
 java.lang.Object
@@ -42,7 +47,8 @@ java.util.Map<K, V>  ← NOT a subtype of Collection
     └── TreeMap
 ```
 > * LinkedList implements both List and Deque.
-#### 1.2 `Iterable<T>` - Root
+
+### 1.2 `Iterable<T>` - Root
 
 All collection types **must implement** `Iterable<T>` so they can be used in **enhanced for-loops** (for-each loops):
 
@@ -73,11 +79,11 @@ public interface Iterator<T> {
 > * hasNext() - Returns true if there are more elements in the collection.
 > * next() - returns the next element in the collection.
 
-##### ✅ 1.2.1 Custom Example: Implementing Our Own `Iterable`
+#### ✅ 1.2.1 Custom Example: Implementing Our Own `Iterable`
 
 Iterable is at the root of the collection hierarchy and it must be implemented by each Collection. Hence it's important to know how it works. In the following example, let's construct a custom Iterator implementation.
 
-#### 📦 Defining the class
+##### 📦 Defining the class
 
 ```java
 import java.util.Iterator;
@@ -146,7 +152,7 @@ This works seamlessly with the **for-each loop** because we implemented `Iterabl
 
 ---
 
-#### 1.3 `Collection<T>` — The Base Interface
+### 1.3 `Collection<T>` — The Base Interface
 
 This is the **main interface** for all data structures that represent a group of objects.
 It defines common operations like:
@@ -162,7 +168,7 @@ All **List**, **Set**, and **Queue** extend `Collection`.
 
 >❗️Note: `Map` is **not** a subtype of `Collection` because it stores key-value pairs instead of just values.
 
-#### 🔸1.4  Interfaces Breakdown
+### 🔸1.4  Interfaces Breakdown
 
 | Interface                    | Purpose                                                 |
 | ---------------------------- | ------------------------------------------------------- |
@@ -175,7 +181,7 @@ All **List**, **Set**, and **Queue** extend `Collection`.
 
 ---
 
-### ✅ 2. `ArrayList`
+## ✅ 2. `ArrayList`
 
 > `ArrayList` is a **resizable array** implementation of the `List` interface.
 
@@ -185,7 +191,7 @@ All **List**, **Set**, and **Queue** extend `Collection`.
 > * Not synchronized by default
 
 
-#### 🔧 Internal Structure of `ArrayList`
+### 🔧 Internal Structure of `ArrayList`
 
 ```java
 public class ArrayList<E>
@@ -193,7 +199,7 @@ public class ArrayList<E>
     implements List<E>, RandomAccess, Cloneable, Serializable
 ```
 
-#### 🔩 Under the Hood
+### 🔩 Under the Hood
 
 Internally, `ArrayList` uses a regular **array of Objects** to store elements.
 
@@ -202,9 +208,9 @@ transient Object[] elementData; // the actual backing array
 private int size;               // number of elements currently stored
 ```
 
-#### ⚙️ How It Works: Step-by-Step
+### ⚙️ How It Works: Step-by-Step
 
-##### 2.1 **Initialization**
+#### 2.1 **Initialization**
 
 When we create an ArrayList:
 
@@ -221,7 +227,7 @@ Internally:
 DEFAULT_CAPACITY = 10;
 ```
 
-##### 2.2 **Adding Elements**
+#### 2.2 **Adding Elements**
 
 ```java
 list.add("Java");
@@ -239,7 +245,7 @@ elementData[size++] = "Java";
 
 ---
 
-##### 🔹 2.3 **Resizing (Dynamic Array)**
+#### 🔹 2.3 **Resizing (Dynamic Array)**
 
 If capacity is full, it resizes the array:
 
@@ -259,7 +265,7 @@ newCapacity = oldCapacity + (oldCapacity >> 1); // i.e., 1.5x growth
 
 ---
 
-##### 🔹 2.4 **Getting Elements**
+#### 🔹 2.4 **Getting Elements**
 
 ```java
 String val = list.get(2);
@@ -275,7 +281,7 @@ This is **O(1)** access, just like arrays.
 
 ---
 
-##### 🔹 2.5 **Removing Elements**
+#### 🔹 2.5 **Removing Elements**
 
 ```java
 list.remove(2);
@@ -292,7 +298,7 @@ System.arraycopy(elementData, index + 1, elementData, index, size - index - 1);
 
 So this is **O(n)** in worst case.
 
-#### ⚠️ Performance Summary
+#### ⚠️ 2.6 Performance Summary
 
 | Operation       | Time Complexity  | Notes                      |
 | --------------- | ---------------- | -------------------------- |
@@ -303,7 +309,7 @@ So this is **O(n)** in worst case.
 | `contains(e)`   | O(n)             | Linear search              |
 
 
-#### 🧠 Why to Use ArrayList?
+#### 🧠 2.7 Why to Use ArrayList?
 
 ✅ Fast random access
 ✅ Simple resizing logic
@@ -311,7 +317,7 @@ So this is **O(n)** in worst case.
 ❌ Not ideal for frequent middle insertions/deletions
 
 
-## 🔒 Thread-Safety?
+#### 🔒 Thread-Safety?
 
 * Not thread-safe by default.
 * Use `Collections.synchronizedList(list)` for basic sync.
@@ -336,7 +342,7 @@ capacity: 10
 
 ---
 
-### ✅ 3. `LinkedList`
+## ✅ 3. `LinkedList`
 
 `LinkedList` is a **doubly linked list** implementation of both:
 
@@ -352,11 +358,11 @@ It supports:
 * **Deque** → add/remove from both ends
 * **Queue** behavior (FIFO)
 
-#### 🔧 3.1 Internal Structure
+### 🔧 3.1 Internal Structure
 
 Instead of an array, `LinkedList` is made of **nodes** linked together.
 
-##### Node Structure:
+* ***Node Structure:**
 
 ```java
 private static class Node<E> {
@@ -375,7 +381,7 @@ transient Node<E> last;
 
 This makes it a **doubly-linked list** (not singly).
 
-#### 📦 3.2 Example
+### 📦 3.2 Example
 
 ```java
 LinkedList<String> list = new LinkedList<>();
@@ -393,9 +399,9 @@ first → [Java] ⇄ [Python] ⇄ [C++] ← last
 > * Each node links forward and backward.
 
 
-#### ⚙️ 3.3 How Key Operations Work in a LinkedList
+### ⚙️ 3.3 How Key Operations Work in a LinkedList
 
-##### 🔹 3.3.1 **Adding Elements**
+#### 🔹 3.3.1 **Adding Elements**
 
 ```java
 list.add("Go");
@@ -409,7 +415,7 @@ list.add("Go");
 
 ➡️ O(1) time.
 
-##### 🔹 3.3.2 **Adding at index**
+#### 🔹 3.3.2 **Adding at index**
 
 ```java
 list.add(1, "Kotlin");
@@ -421,7 +427,7 @@ list.add(1, "Kotlin");
 
 ➡️ O(n) in worst case because of traversal.
 
-##### 🔹 3.3.3 **Getting an Element**
+#### 🔹 3.3.3 **Getting an Element**
 
 ```java
 list.get(2);
@@ -434,7 +440,7 @@ list.get(2);
 
 ➡️ O(n) time
 
-##### 🔹 3.3.4 **Removing an Element**
+#### 🔹 3.3.4 **Removing an Element**
 
 ```java
 list.remove(1);
@@ -446,7 +452,7 @@ list.remove(1);
 
 ➡️ O(n) due to traversal, but actual unlinking is O(1)
 
-#### 3.4 Time Complexity Summary
+### 3.4 Time Complexity Summary
 
 | Operation       | Time Complexity | Notes                 |
 | --------------- | --------------- | --------------------- |
@@ -459,7 +465,7 @@ list.remove(1);
 
 ---
 
-#### 🧠 3.5 When to Use LinkedList
+### 🧠 3.5 When to Use LinkedList
 
 | Use Case                      | Recommendation          |
 | ----------------------------- | ----------------------- |
@@ -469,7 +475,7 @@ list.remove(1);
 
 ---
 
-#### 🔄 4 Key Differences: ArrayList vs LinkedList
+## 🔄 4 Key Differences: ArrayList vs LinkedList
 
 | Feature           | ArrayList                 | LinkedList                 |
 | ----------------- | ------------------------- | -------------------------- |

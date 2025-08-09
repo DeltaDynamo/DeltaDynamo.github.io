@@ -5,7 +5,12 @@ slug: "core-java-1-oops-four-pillars"
 date: 2025-07-20
 author: Anubhav Srivastava
 tags: [core java, object oriented programming]
-version: 1.0
+version: 1.1
+---
+
+* TOC
+{:toc}
+
 ---
 
 ## 🧠 Object Oriented Programming Basics : Polymorphism, Encapsulation, Inheritance & Abstraction
@@ -14,9 +19,9 @@ Object-Oriented Programming (OOP) is not just a paradigm - it’s a mindset. To 
 
 ---
 
-### 1. 🔁 Polymorphism – “Same Action, Different Behavior”
+## 1. 🔁 Polymorphism – “Same Action, Different Behavior”
 
-#### 🧠 Intuition
+### 🧠 1.1 Intuition
 
 > Imagine we press a “Play” button. On a music player, it plays music. On a video player, it plays a movie. On a game, it starts the level.
 > One button, many behaviors.
@@ -24,7 +29,7 @@ Object-Oriented Programming (OOP) is not just a paradigm - it’s a mindset. To 
 
 In Java, **polymorphism allows us to treat different types of objects in the same way**, while letting them behave differently.
 
-#### ✅ Two Types:
+### ✅ 1.2 Two Types:
 
 * **Compile-time (Static) Polymorphism**: Method Overloading
 * **Runtime (Dynamic) Polymorphism**: Method Overriding
@@ -94,9 +99,9 @@ public class Test {
 
 ---
 
-### 2. 🔒 Encapsulation – “Protect What Matters”
+## 2. 🔒 Encapsulation – “Protect What Matters”
 
-#### 🧠 Intuition
+### 🧠 Intuition
 
 > Think of a **coffee machine**. We push a button to get coffee, but the internal wiring, boiling process, pressure systems - all are hidden.
 > We don’t need to know how it works to use it. That’s **encapsulation**.
@@ -137,9 +142,9 @@ class BankAccount {
 
 ---
 
-### 3. 🧬 Inheritance – “Reuse & Extend Behavior”
+## 3. 🧬 Inheritance – “Reuse & Extend Behavior”
 
-#### 🧠 Intuition
+### 🧠 3.1 Intuition
 
 > We inherit traits from our parents - like eye color or height.
 > Similarly, a Java class can **inherit fields and methods from another**.
@@ -183,9 +188,9 @@ public class Test {
 
 ---
 
-### 4. 🧽 Abstraction – “Focus on What, Hide the How”
+## 4. 🧽 Abstraction – “Focus on What, Hide the How”
 
-#### 🧠 Intuition
+### 🧠 Intuition
 
 > When we drive a car, we use the steering wheel and we don’t care **how** the engine works internally.
 > We only interact with the **interface**, not the implementation.
@@ -518,11 +523,7 @@ If these two methods aren’t properly understood or implemented, we may face st
 
 Let’s decode it step by step. 🧠🔍
 
----
-
 ### 🧱 What is `equals()`?
-
-#### 🔍 Purpose:
 
 It checks **logical equality** between two objects (i.e., whether two objects are *meaningfully* equal, not necessarily the same memory location).
 
@@ -543,8 +544,6 @@ So:
 
 ### 🧮 What is `hashCode()`?
 
-#### 🔍 Purpose:
-
 Returns an `int` hash value of the object. Used in **hash-based collections** (`HashMap`, `HashSet`, etc.) to bucketize and locate elements quickly.
 
 Java’s contract:
@@ -555,7 +554,7 @@ BUT:
 
 > “If two objects have the same `hashCode()`, they *might not* be equal.”
 
-#### 🤝 The Contract Between `equals()` and `hashCode()`
+### 🤝 The Contract Between `equals()` and `hashCode()`
 
 | Requirement                       | Why it Matters                                   |
 | --------------------------------- | ------------------------------------------------ |
@@ -565,7 +564,7 @@ BUT:
 
 ---
 
-#### 💥 What Happens if We Violate This Contract?
+### 💥 What Happens if We Violate This Contract?
 
 #### 🚫 Example:
 

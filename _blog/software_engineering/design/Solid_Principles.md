@@ -7,6 +7,11 @@ author: Anubhav Srivastava
 tags: [software engineering, design pattern]
 ---
 
+* TOC
+{:toc}
+
+---
+
 ## 🧠 What is SOLID?
 
 > **S.O.L.I.D** is an acronym for:
@@ -19,13 +24,11 @@ tags: [software engineering, design pattern]
 
 These principles were introduced by Robert C. Martin (Uncle Bob) and are foundational to good software design.
 
----
-
-### 🔎 Let’s go one-by-one with simple intuition, analogy, and examples.
+**🔎 Let’s go one-by-one with simple intuition, analogy, and examples.**
 
 ---
 
-## 🧱 1. **Single Responsibility Principle (SRP)**
+## 🧱 1. Single Responsibility Principle (SRP)
 
 > A class should have **only one reason to change**.
 
@@ -35,7 +38,7 @@ These principles were introduced by Robert C. Martin (Uncle Bob) and are foundat
 * A **waiter** serves customers
   Don't mix responsibilities.
 
-### 💻 Java Example — ❌ Violation:
+### 💻 Example — ❌ Violation:
 
 ```java
 class Report {
@@ -72,7 +75,7 @@ class ReportSaver {
 
 ---
 
-## 🧱 2. **Open/Closed Principle (OCP)**
+## 🧱 2. Open/Closed Principle (OCP)
 
 > Software entities should be **open for extension**, but **closed for modification**.
 
@@ -80,7 +83,7 @@ class ReportSaver {
 
 We can **plug in** new USB devices without **rewriting our motherboard**.
 
-### 💻 Violation:
+### 💻 Example — ❌ Violation:
 
 ```java
 class PaymentProcessor {
@@ -93,7 +96,7 @@ class PaymentProcessor {
 
 * Adding new payment methods → modify existing class = ❌
 
-### ✅ Refactored using Polymorphism:
+### ✅ Refactored: Using Polymorphism
 
 ```java
 interface PaymentMethod {
@@ -117,7 +120,7 @@ class PaymentProcessor {
 
 ---
 
-## 🧱 3. **Liskov Substitution Principle (LSP)**
+## 🧱 3. Liskov Substitution Principle (LSP)
 
 > Subtypes must be substitutable for their base types **without breaking behavior**.
 
@@ -125,7 +128,7 @@ class PaymentProcessor {
 
 If every **electric car** is a kind of **car**, it should still drive, stop, turn like any car.
 
-### 💻 Violation:
+### 💻 Example — ❌ Violation:
 
 ```java
 class Bird {
@@ -139,7 +142,7 @@ class Ostrich extends Bird {
 
 Ostrich can't fly, so substituting it breaks the logic.
 
-### ✅ Fix:
+### ✅ Refactored:
 
 Don’t force all birds to fly — separate the concept.
 
@@ -153,7 +156,7 @@ interface FlyingBird extends Bird {
 
 ---
 
-## 🧱 4. **Interface Segregation Principle (ISP)**
+## 🧱 4. Interface Segregation Principle (ISP)
 
 > Clients should not be forced to depend on interfaces they don’t use.
 
@@ -161,7 +164,7 @@ interface FlyingBird extends Bird {
 
 Don’t give a **printer** the controls of a **3D scanner** if it doesn’t need it.
 
-### 💻 Violation:
+### 💻 Example — ❌ Violation:
 
 ```java
 interface Machine {
@@ -177,7 +180,7 @@ class SimplePrinter implements Machine {
 }
 ```
 
-### ✅ Fix:
+### ✅ Refactored:
 
 ```java
 interface Printer { void print(); }
@@ -190,7 +193,7 @@ Split big interfaces into **role-specific ones**.
 
 ---
 
-## 🧱 5. **Dependency Inversion Principle (DIP)**
+## 🧱 5. Dependency Inversion Principle (DIP)
 
 > High-level modules should not depend on low-level modules — both should depend on **abstractions**.
 
@@ -198,7 +201,7 @@ Split big interfaces into **role-specific ones**.
 
 We don’t directly plug the toaster into the power plant — rather go through a **standard plug interface**.
 
-### 💻 Violation:
+### 💻 Example — ❌ Violation:
 
 ```java
 class MySQLDatabase {
@@ -210,7 +213,7 @@ class UserService {
 }
 ```
 
-### ✅ Fix using interface:
+### ✅ Refactored: Using Interface
 
 ```java
 interface Database {
@@ -234,7 +237,7 @@ Now we can inject any DB (`PostgreSQL`, `MockDB`, etc.)
 
 ---
 
-## 🧾 SOLID Summary Table
+## 🧾 SOLID Principles : Summary Table
 
 | Principle | What it Means                      | Helps Us With          |
 | --------- | ---------------------------------- | ----------------------- |

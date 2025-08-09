@@ -8,7 +8,12 @@ tags: [core java, garbage collection, memory]
 version: 1.0
 ---
 
-## 🔄 Java Object Lifecycle: From Birth to Garbage Collection
+* TOC
+{:toc}
+
+---
+
+## 🔄 1. Java Object Lifecycle: From Birth to Garbage Collection
 
 Everything in Java is an **object** (well, almost everything). But have we ever wondered **what happens to an object behind the scenes**, from creation to destruction?
 
@@ -17,7 +22,7 @@ This process is called the **Object Lifecycle**—and it’s one of the most fun
 
 ### 🛠️ Stage 1: Object Creation (Birth)
 
-### 🧠 Intuition
+#### 🧠 Intuition
 
 > Think of creating a new car in a factory. We allocate resources (steel, engine, etc.), assemble them, and then bring it to life.
 
@@ -29,7 +34,7 @@ Car c = new Car();
 
 Here's what happens step-by-step:
 
-### 🔍 Under the Hood:
+#### 🔍 Under the Hood:
 
 1. **Memory is allocated** on the heap for a new `Car` object.
 2. The object is initialized with default values (e.g., `0`, `null`, `false`).
@@ -38,7 +43,7 @@ Here's what happens step-by-step:
 
 ---
 
-### 📘 Code Example:
+#### 📘 Code Example:
 
 ```java
 class Car {
@@ -58,13 +63,13 @@ Car c = new Car();  // Car constructor: Object created!
 
 Once the object is created, it **lives in memory**, ready to perform actions, hold data, and collaborate with other objects.
 
-### 🧠 Analogy
+#### 🧠 Analogy
 
 > A car on the road: it drives, turns, plays music—this is the active life phase.
 
 We interact with it via methods, access properties, and pass it around.
 
-### 📘 Example:
+#### 📘 Example:
 
 ```java
 class Car {
@@ -98,7 +103,7 @@ Instead, when an object is **no longer referenced**, it becomes **eligible for G
 
 ---
 
-### 🧠 When Does an Object Become Eligible?
+#### 🧠 When Does an Object Become Eligible for Garbage Collection ?
 
 When **no variable points to it anymore**.
 
@@ -139,11 +144,11 @@ Why? Because:
 
 ---
 
-### ✅ Modern Alternatives: `AutoCloseable` & `try-with-resources`
+#### ✅ Modern Alternatives: `AutoCloseable` & `try-with-resources`
 
 If our object holds **external resources** (like files, sockets), we **shouldn’t wait for GC**—**instead close them ourselves** using `AutoCloseable`.
 
-#### 📘 Example:
+##### 📘 Example:
 
 ```java
 class MyResource implements AutoCloseable {
@@ -170,7 +175,7 @@ try (MyResource res = new MyResource()) {
 
 ---
 
-## 🧠 Lifecycle Recap
+## 🧠 2. Lifecycle Recap
 
 Let’s summarize the full lifecycle in human-like terms:
 
@@ -212,13 +217,7 @@ We don’t need to micromanage memory, but understanding this helps us:
 
 ---
 
-Awesome! Let’s take our understanding deeper by exploring **JVM memory management**, **heap vs stack**, and **escape analysis**—all tightly linked to how objects behave at runtime.
-
-This blog-style explanation will show **what’s really going on under the hood**, so we can write more performant and predictable Java code.
-
----
-
-## 🧠 JVM Memory Management: What we as Java Developer's Must Know
+## 🧠 3. JVM Memory Management: What we as Java Developer's Must Know
 
 The Java Virtual Machine (JVM) is like the **engine** behind every Java program. Understanding **how it manages memory** helps us avoid issues like:
 
@@ -244,7 +243,7 @@ When a Java program runs, the JVM divides memory into **distinct regions**:
 
 ---
 
-### 📘 Stack Example:
+#### 📘 Stack Example:
 
 ```java
 public void compute() {
@@ -265,7 +264,7 @@ public void compute() {
 
 ---
 
-### 📘 Heap Example:
+#### 📘 Heap Example:
 
 ```java
 Person p = new Person("Alice");
@@ -323,7 +322,7 @@ When the method ends:
 
 ---
 
-### 🚀 Escape Analysis – Optimize Object Allocation
+## 🚀 4. Escape Analysis – Optimize Object Allocation
 
 Java 6+ JVMs are smart. They use **escape analysis** to decide **where to allocate objects**: stack or heap.
 
@@ -372,7 +371,7 @@ public Point createPoint() {
 
 ---
 
-## 🧼 Garbage Collection — How JVM Cleans the Heap
+## 🧼 5. Garbage Collection — How JVM Cleans the Heap
 
 GC is a **background process** that:
 
@@ -408,7 +407,7 @@ We can configure GC with JVM flags like:
 
 ---
 
-### 🧠 Summary: Java Memory & Object Lifecycle
+## 🧠 6. Summary: Java Memory & Object Lifecycle
 
 | Step             | Involves                               | Memory Area  |
 | ---------------- | -------------------------------------- | ------------ |
@@ -420,7 +419,7 @@ We can configure GC with JVM flags like:
 
 ---
 
-### ✅ Tips for Java Memory Efficiency
+## ✅ 7. Tips for Java Memory Efficiency
 
 1. **Keep methods short and focused** – enables escape analysis
 2. **Use local variables where possible** – stack is faster

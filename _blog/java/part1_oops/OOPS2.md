@@ -5,10 +5,15 @@ slug: "core-java-1-oops-local-anonymous-classes"
 date: 2025-07-21
 author: Anubhav Srivastava
 tags: [core java, object oriented programming]
-version: 1.0
+version: 1.1
 ---
 
-## 🧠 Local & Anonymous Classes in Java
+* TOC
+{:toc}
+
+---
+
+## 🧠 1. Local & Anonymous Classes in Java
 
 In Java, classes can be declared not just at the top-level, but also **inside methods**. These are called **local** and **anonymous** classes. Both are types of **inner classes**, and they are typically used when the class is:
 
@@ -19,7 +24,7 @@ Let’s break them down intuitively.
 
 ---
 
-### 🏠 1. Local Classes – “A Class Inside a Method”
+### 🏠 1.1 Local Classes – “A Class Inside a Method”
 
 #### 🔍 What is a Local Class?
 
@@ -60,7 +65,7 @@ h.serveDish();  // Output: Cooking secret pasta recipe...
 
 ---
 
-### 🧪 Example with Local Variables:
+#### 🧪 Example with Local Variables:
 
 ```java
 public class Printer {
@@ -83,9 +88,9 @@ public class Printer {
 
 ---
 
-### 👻 2. Anonymous Classes – “Class Without a Name”
+## 👻 2. Anonymous Classes – “Class Without a Name”
 
-#### 🔍 What is an Anonymous Class?
+### 🔍 What is an Anonymous Class?
 
 An **Anonymous Class** is a **one-time-use subclass or implementation**, created **on the fly**, **without naming it**.
 
@@ -149,7 +154,7 @@ t.start();
 
 ---
 
-### 🔍 Local vs Anonymous Class – Key Differences
+## 🔍 3. Local vs Anonymous Class – Key Differences
 
 | Feature                  | Local Class                | Anonymous Class                         |
 | ------------------------ | -------------------------- | --------------------------------------- |
@@ -161,9 +166,9 @@ t.start();
 | Reusability              | 🟡 Limited (within method) | ❌ None – single-use                     |
 
 
-### 💡 Real-Life Usage Examples
+## 💡4. Real-Life Usage Examples
 
-#### ✅ GUI Programming (Pre-Lambda Java)
+### ✅ GUI Programming (Pre-Lambda Java)
 
 ```java
 button.addActionListener(new ActionListener() {
@@ -173,7 +178,7 @@ button.addActionListener(new ActionListener() {
 });
 ```
 
-#### ✅ Sorting with Comparator
+### ✅ Sorting with Comparator
 
 ```java
 List<String> list = Arrays.asList("dog", "cat", "elephant");
@@ -185,14 +190,14 @@ Collections.sort(list, new Comparator<String>() {
 });
 ```
 
-#### 🧠 How to use?
+### 🧠 How to use?
 
 * Use **Local Classes** when you want a helper class scoped to a method, and you **may need to reuse** it **within that method**.
 * Use **Anonymous Classes** when you need a **quick, one-time-use class**, especially for **implementing interfaces or overriding methods inline**.
 
 ---
 
-### 🔍 What Can Local and Anonymous Classes Access in Java?
+## 🔍 5. What Can Local and Anonymous Classes Access in Java?
 
 When working with **local or anonymous classes**, a common question is:
 
@@ -202,7 +207,7 @@ Let’s break it down clearly - with examples and practical reasoning.
 
 ---
 
-#### ✅ 1. **Instance Variables of the Enclosing Class**
+### ✅ 5.1 **Instance Variables of the Enclosing Class**
 
 Local/anonymous classes can access non-static fields of the enclosing class directly - even if they’re `private`.
 
@@ -226,7 +231,7 @@ The inner class keeps an **implicit reference** to the outer class (`Outer.this`
 
 ---
 
-#### ✅ 2. **Static Variables of the Enclosing Class**
+### ✅ 5.2 **Static Variables of the Enclosing Class**
 
 They can also access static fields of the outer class without issue.
 
@@ -246,7 +251,7 @@ Static fields belong to the class, not the instance - so they’re always access
 
 ---
 
-### ✅ 3. **Final or Effectively Final Local Variables**
+### ✅ 5.3 **Final or Effectively Final Local Variables**
 
 This is the most important (and often misunderstood) rule:
 
@@ -270,7 +275,7 @@ Java captures the value at the time the inner class is created. It **copies** th
 
 ---
 
-#### ✅ 4. **Final or Effectively Final Method Parameters**
+### ✅ 5.4 **Final or Effectively Final Method Parameters**
 
 Parameters behave just like local variables.
 
@@ -283,7 +288,7 @@ void greet(String name) {
 
 If we try to modify `name`, we'll break the "effectively final" rule and get a compile error.
 
-#### 🧠 Summary Table
+## 🧠 6. Summary Table
 
 | Variable Type                        | Accessible? | Reason                                       |
 | ------------------------------------ | ----------- | -------------------------------------------- |

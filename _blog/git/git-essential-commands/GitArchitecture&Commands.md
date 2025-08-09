@@ -7,31 +7,36 @@ author: Anubhav Srivastava
 tags: [git, version control]
 ---
 
+* TOC
+{:toc}
+
+---
+
 Git today is probably the most important tool to master as a developer. It doesn't matter what tech stack we use, which side of the application we work on (be it frontend or backend), knowing Git is very important. In this post covers we will try to look at some of the essential Git commands along with their usage scenarios.
 
 ---
 
 Git is a free and open source **distributed version control system (DVCS)** designed to track changes in source code efficiently. Let us talk a bit about the underlying architecture behind this awesome tool!
 
-#### Core Components of Git Architecture
+## 1. Core Components of Git Architecture
 
 <div align="center">
     <img src="https://raw.githubusercontent.com/DeltaDynamo/DeltaDynamo.github.io/refs/heads/main/_blog/git/git-essential-commands/assets/git-wkf-diagram.webp" alt="Banner" style="width:90%">
 </div>
 
-##### 1. **Working Directory**
+### 1.1 Working Directory
 The working directory contains the current state of the project, where developers modify, create, or delete files before adding them to the repository.
 
-##### 2. **Staging Area (Index)**
+### 1.2 Staging Area (Index)
 A temporary storage area where files are prepared before committing. It allows selective commits, meaning developers can stage only specific changes rather than committing all modified files at once.
 
-##### 3. **Local Repository**
+### 1.3 Local Repository
 A hidden `.git/` directory in the project folder that contains all commits, branches, and configurations. Git stores snapshots of changes here, allowing users to roll back if necessary.
 
-##### 4. **Remote Repository**
+### 1.4 Remote Repository
 A shared repository hosted on a remote server (e.g., GitHub, GitLab, Bitbucket). Developers push and pull changes to/from this repository to collaborate.
 
-#### Git Object Model
+### 1.5 Git Object Model
 
 Git stores data in the form of **objects** inside the `.git/objects` directory. These objects are immutable and content-addressable, meaning they are referenced by SHA-1 hashes.
 
@@ -58,9 +63,9 @@ Unlike centralized version control systems, Git maintains a full copy of the rep
 
 ---
 
-<h2 align="center">Git Commands</h2>
+## 2. Git Commands
 
-### 1. `git init`
+### 2.1 `git init`
 ##### Scenario: Starting a New Repository
 While beginning a new project and to use Git for version control, we initialize a Git repository using `git init`.
 ```sh
@@ -89,7 +94,7 @@ This structure allows Git to manage and track the project's history efficiently.
 
 ---
 
-### 2. `git clone`
+### 2.2 `git clone`
 ##### Scenario: Copying an Existing Repository
 To collaborate on an existing project which might be hosted remotely, in order to clone the repository to your local machine we use this command.
 ```sh
@@ -98,7 +103,7 @@ git clone <repository_url>
 
 ---
 
-### 3. `git add`
+### 2.3 `git add`
 ##### Scenario: Staging Changes Before Committing
 Before committing changes, to move the modified or newly created files to the staging area.
 ```sh
@@ -108,7 +113,7 @@ git add . #Add all files
 
 ---
 
-### 4. `git commit`
+### 2.4 `git commit`
 ##### Scenario: Saving Changes with a Message
 After staging changes, commit them with a meaningful message. It records the changes in Git history.
 ```sh
@@ -116,7 +121,7 @@ git commit -m "Added feature X"
 ```
 ---
 
-### 5. `git status`
+### 2.5 `git status`
 ##### Scenario: Checking the Current Repository State
 To see which files are staged, modified, or untracked.
 ```sh
@@ -124,7 +129,7 @@ git status
 ```
 ---
 
-### 6. `git log`
+### 2.6 `git log`
 ##### Scenario: Viewing Commit History
 To see past commits along with author and timestamp details.
 ```sh
@@ -132,7 +137,7 @@ git log
 ```
 ---
 
-### 7. `git branch`
+### 2.7 `git branch`
 ##### Scenario: Managing Branches
 To create a new branch or list existing branches.
 ```sh
@@ -141,7 +146,7 @@ git branch #List all branches
 ```
 ---
 
-### 8. `git checkout`
+### 2.8 `git checkout`
 ##### Scenario: Switching Between Branches
 To move to a different branch.
 ```sh
@@ -150,7 +155,7 @@ git checkout <branch_name>
 
 ---
 
-### 9. `git merge`
+### 2.9 `git merge`
 ##### Scenario: Merging Changes from Another Branch
 To combine changes from another branch into the current branch.
 ```sh
@@ -158,7 +163,7 @@ git merge <branch_name>
 ```
 ---
 
-### 10. `git rebase`
+### 2.10 `git rebase`
 ##### Scenario: Rewriting Commit History
 To update a branch by moving its changes on top of another branch. Keeps a linear project history
 ```sh
@@ -166,8 +171,8 @@ git rebase <branch_name>
 ```
 ---
 
-### 11. `git stash`
-#### Scenario: Saving Changes Temporarily
+### 2.11 `git stash`
+##### Scenario: Saving Changes Temporarily
 To save changes without committing them. Allows temporary storage of changes before switching branches.
 ```sh
 git stash
@@ -175,8 +180,8 @@ git stash
 
 ---
 
-### 12. `git reset`
-#### Scenario: Undoing Changes
+### 2.12 `git reset`
+##### Scenario: Undoing Changes
 To unstage changes or reset commit history based on selected reset mode.
 ```sh
 git reset <file>
@@ -185,8 +190,8 @@ git reset --hard <commit_hash>
 
 ---
 
-### 13. `git revert`
-#### Scenario: Reverting a Commit
+### 2.13 `git revert`
+##### Scenario: Reverting a Commit
 To undo a commit by creating a new commit.
 ```sh
 git revert <commit_hash>
@@ -194,8 +199,8 @@ git revert <commit_hash>
 
 ---
 
-### 14. `git cherry-pick`
-#### Scenario: Applying a Specific Commit
+### 2.14 `git cherry-pick`
+##### Scenario: Applying a Specific Commit
 To apply a commit from one branch into another.
 ```sh
 git cherry-pick <commit_hash>
@@ -203,8 +208,8 @@ git cherry-pick <commit_hash>
 
 ---
 
-### 15. `git fetch`
-#### Scenario: Retrieving Updates Without Merging
+### 2.15 `git fetch`
+##### Scenario: Retrieving Updates Without Merging
 To get the latest changes from the remote repository. This command updates local metadata without modifying working files
 ```sh
 git fetch
@@ -212,8 +217,8 @@ git fetch
 
 ---
 
-### 16. `git pull`
-#### Scenario: Getting the Latest Changes from Remote
+### 2.16 `git pull`
+##### Scenario: Getting the Latest Changes from Remote
 To fetch and merge changes from the remote repository. This synchronizes local code with the latest remote changes
 ```sh
 git pull
@@ -221,8 +226,8 @@ git pull
 
 ---
 
-### 17. `git push`
-#### Scenario: Uploading Local Changes to Remote
+### 2.17 `git push`
+##### Scenario: Uploading Local Changes to Remote
 To send local commits to the remote repository.
 ```sh
 git push origin <branch_name>
@@ -230,8 +235,8 @@ git push origin <branch_name>
 
 ---
 
-### 18. `git tag`
-#### Scenario: Marking Important Points in History
+### 2.18 `git tag`
+##### Scenario: Marking Important Points in History
 To create a tag for a specific commit. It helps to add labels to significant versions like releases.
 ```sh
 git tag <tag_name>
@@ -239,8 +244,8 @@ git tag <tag_name>
 
 ---
 
-### 19. `git bisect`
-#### Scenario: Finding a Buggy Commit
+### 2.19 `git bisect`
+##### Scenario: Finding a Buggy Commit
 To perform a binary search to locate the commit that introduced a bug. It helps to efficiently identify faulty commits in large projects.
 ```sh
 git bisect start
@@ -250,8 +255,8 @@ git bisect good <commit_hash>
 
 ---
 
-### 20. `git blame`
-#### Scenario: Identifying Who Made a Change
+### 2.20 `git blame`
+##### Scenario: Identifying Who Made a Change
 To find out who last modified each line in a file. Helps track changes for debugging and code review.
 ```sh
 git blame <file>
@@ -259,7 +264,7 @@ git blame <file>
 
 ---
 
-### Conclusion
+## Conclusion
 
 These are the Git commands I believe are most important and frequently used by developers in their daily workflow. 
 While Git offers a wide range of powerful commands beyond what's covered here, this list should well serve as a solid foundation. 

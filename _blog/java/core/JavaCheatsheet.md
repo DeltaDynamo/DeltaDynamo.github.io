@@ -5,7 +5,12 @@ slug: "core-java-cheatsheet"
 date: 2025-07-25
 author: Anubhav Srivastava
 tags: [core java, terminologies]
-version: 1.0
+version: 1.1
+---
+
+* TOC
+{:toc}
+
 ---
 
 ## Key Java Terms and Concepts
@@ -14,8 +19,9 @@ version: 1.0
 
 ---
 
-#### ✅ 1. [Interface](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
+### ✅ 1. Interface
 
+[Docs](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
 > An `interface` in Java defines a **contract** — a set of method signatures — that implementing classes must follow. Unlike abstract classes, interfaces do **not have instance fields or constructors**, and they are used to achieve **100% abstraction** (in older Java) and **multiple inheritance of type**.
 >
 > From **Java 8**, interfaces can also include **default** and **static** methods with implementations.
@@ -76,7 +82,8 @@ interface Calculator {
 
 ---
 
-#### ✅ 2. [Abstract Class and Abstract Method](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
+### ✅ 2. Abstract Class and Abstract Method
+[Docs](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)
 
 > An abstract class in Java is a class that cannot be instantiated directly. It acts as a blueprint or foundation for other classes to build upon. We should think of it as an incomplete class meant to be extended by subclasses that will provide the full implementation.
 >
@@ -123,7 +130,7 @@ class Dog extends Animal {
 
 ---
 
-#### ✅ 3. **Functional Interface**
+### ✅ 3. Functional Interface
 
 > A functional interface is an interface that contains **exactly one abstract method**. It is used as the **target type for lambda expressions** and method references. Functional interfaces may also contain **default**, **static**, and **private methods**, but only one abstract method is allowed.
 
@@ -156,7 +163,8 @@ System.out.println(toInteger.convert("42")); // Output: 42
 
 ---
 
-#### ✅ 4. [Generics](https://docs.oracle.com/javase/tutorial/java/generics/index.html)
+### ✅ 4. Generics
+[Docs](https://docs.oracle.com/javase/tutorial/java/generics/index.html)
 
 > Generics provide **compile-time type safety** and eliminate the need for casting by allowing classes, interfaces, and methods to operate on **typed parameters** (e.g., `List<String>`). They enable **code reusability** with different data types while preserving strong type checking.
 
@@ -236,7 +244,7 @@ void addIntegers(List<? super Integer> list) {
 
 ---
 
-#### ✅ 5. `static` keyword
+### ✅ 5. `static` keyword
 
 > The static keyword is used to define class-level members - i.e. fields, methods, blocks, and nested classes. These members are shared across all instances of the class and can be accessed without creating an object. Static members belong to the class itself, not to any particular instance.
 
@@ -339,7 +347,7 @@ class Outer {
 
 ---
 
-#### ✅ 6. `final` keyword
+### ✅ 6. `final` keyword
 
 > The `final` keyword is used to indicate that something **cannot be changed**. It can apply to variables (cannot be reassigned), methods (cannot be overridden), and classes (cannot be extended).
 
@@ -363,7 +371,7 @@ final int x = 10;
 
 ---
 
-#### ✅ 7. `super` keyword
+### ✅ 7. `super` keyword
 
 > Refers to the parent class of the current object and is used to call superclass methods or constructors.
 
@@ -389,7 +397,7 @@ class Dog extends Animal {
 
 ---
 
-#### ✅ 8. Default Methods in Interface
+### ✅ 8. Default Methods in Interface
 
 > A `default` method in an interface allows us to provide a **concrete method implementation** inside the interface itself. It was introduced in Java 8 to support **interface evolution** without breaking existing implementations.
 
@@ -419,7 +427,7 @@ interface Vehicle {
 
 ---
 
-#### ✅ 9. Optional
+### ✅ 9. Optional
 
 > `Optional<T>` is a **container object** introduced in Java 8 to represent the **presence or absence of a non-null value**. It helps eliminate explicit `null` checks and reduces the chances of `NullPointerException`.
 
@@ -449,7 +457,7 @@ System.out.println(empty.orElse("Default")); // prints "Default"
 
 ---
 
-#### ✅ 10. Annotations
+### ✅ 10. Annotations
 
 > Annotations are **metadata markers** that provide information to the compiler, tools, or runtime. They do not change the actual logic but can influence behavior via frameworks, tools, or the Java compiler.
 

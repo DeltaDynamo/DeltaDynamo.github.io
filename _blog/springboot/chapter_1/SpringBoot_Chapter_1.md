@@ -5,11 +5,17 @@ slug: "springboot-chapter-1"
 date: 2025-06-09
 author: Anubhav Srivastava
 tags: [springboot, pom.xml, maven]
+version: 1.0
+---
+
+* TOC
+{:toc}
+
 ---
 
 *In this post, we consider maven to be our choice of build and dependency management tool.*
 
-### ✨ 1. Spring Boot Project Folder Structure
+## ✨ 1. Spring Boot Project Folder Structure
 
 ```
 my-springboot-app/
@@ -32,7 +38,7 @@ my-springboot-app/
 └── README.md
 ```
 
-#### Explanation of Key Files and Directories:
+### Explanation of Key Files and Directories:
 
 * **`src/main/java/`**: Our Java source code goes here. By default this is the path SpringBoot expects the production code to be in.
 * **`src/main/resources/`**: Configuration files, templates, and static assets.
@@ -52,11 +58,11 @@ More about Maven standard directory layout : [Introduction to the Standard Direc
 
 ---
 
-### 📂 2. Where Are All the Dependencies Stored?
+## 📂 2. Where Are All the Dependencies Stored?
 
 When we build our project with Maven, it downloads all required dependencies (JAR files) into our system's **local Maven repository**, not our project folder.
 
-#### Default Location:
+### Default Location:
 
 * **Windows**: `C:\Users\<username>\.m2\repository`
 * **Linux/macOS**: `/home/<username>/.m2/repository`
@@ -67,11 +73,11 @@ Maven caches dependencies so they don't need to be re-downloaded for every proje
 
 ---
 
-### 🔧 3. Understanding `pom.xml` in Depth
+## 🔧 3. Understanding `pom.xml` in Depth
 
 `pom.xml` is the backbone of a Maven-based Spring Boot project. More about [POM](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)
 
-#### Sample `pom.xml`:
+### Sample `pom.xml`
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -114,7 +120,7 @@ Maven caches dependencies so they don't need to be re-downloaded for every proje
 </project>
 ```
 
-#### Key Sections:
+#### Key Sections
 
 * **`groupId` / `artifactId` / `version`**: Define's the project coordinates.
 * **`parent`**: Inherits Spring Boot’s default setup (dependency versions, plugins).
@@ -124,9 +130,9 @@ Maven caches dependencies so they don't need to be re-downloaded for every proje
 
 ---
 
-### 🚀 4. Let's Build the Hello World Spring Boot Application
+## 🚀 4. Building the Hello World Spring Boot Application
 
-#### Step-by-step without using Spring Initializer:
+### Step-by-step without using Spring Initializer
 
 1. **Creating folder structre manually as shown above**
 2. **Writing the main class**:

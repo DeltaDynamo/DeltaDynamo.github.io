@@ -5,6 +5,12 @@ slug: "building-rest-apis-todo"
 date: 2025-07-14
 author: Anubhav Srivastava
 tags: [software engineering, spring boot, rest apis, annotations]
+version: 1.0
+---
+
+* TOC
+{:toc}
+
 ---
 
 In this post, I will try to cover all the important annotations required to build a fairly simple Backend application.
@@ -12,10 +18,10 @@ Hence for this post, I am considering building Backend API's for a Todo Applicat
 
 ---
 
-### 🧠 1. Project Requirements
+## 🧠 1. Project Requirements
 To build a **TODO backend** connected to a **MySQL database**, following clean **layered architecture (controller, service, repository, model)**, and using **Spring Data JPA**.
 
-#### ✅ API Endpoints
+### ✅ API Endpoints
 
 A TODO App Backend with the following REST endpoints:
 
@@ -28,7 +34,7 @@ A TODO App Backend with the following REST endpoints:
 | DELETE      | /todos/{id}   | Delete todo by ID        |
 
 
-#### 🗂 Project Structure
+### 🗂 Project Structure
 
 ```text
 src.main.java.com.example.todoapp
@@ -43,7 +49,7 @@ src.main.java.com.example.todoapp
 └── TodoAppApplication.java
 ```
 
-#### Dependencies for Web, MySQL and JPA 
+### Dependencies for Web, MySQL and JPA 
 ```xml
 <!-- Spring Boot Starter Web -->
 <dependency>
@@ -65,7 +71,7 @@ src.main.java.com.example.todoapp
 </dependency>
 ```
 
-#### 🛠️ MySQL Configuration
+### 🛠️ MySQL Configuration
 
 A db named `tododb` needs to be created.
 ```sql
@@ -100,7 +106,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 
 ---
 
-### 🧱 2. Main Class - `TodoAppApplication.java`
+## 🧱 2. Main Class - `TodoAppApplication.java`
 
 ```java
 @SpringBootApplication
@@ -126,7 +132,7 @@ This is a composite annotation — it combines three important annotations:
 
 ---
 
-### 📄 3. Model (Entity) - `Todo.java`
+## 📄 3. Model (Entity) - `Todo.java`
 
 ```java
 @Entity
@@ -164,7 +170,7 @@ public class Todo {
 
 ---
 
-### 📄 4. Repository - `TodoRepository.java`
+## 📄 4. Repository - `TodoRepository.java`
 
 ```java
 @Repository
@@ -176,7 +182,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 
 ---
 
-### 📄 5. Service - `TodoService.java`
+## 📄 5. Service - `TodoService.java`
 
 > The **@Service** is a *stereotype* annotation in Spring, used to mark a Java class as a service component, meaning it's part of your application's business logic layer and should be automatically discovered and managed by Spring.
 

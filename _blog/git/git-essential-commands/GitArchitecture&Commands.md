@@ -5,6 +5,7 @@ slug: "mastering-git-architecture-essential-commands"
 date: 2025-04-05
 author: Anubhav Srivastava
 tags: [git, version control]
+version: 1.0
 ---
 
 * TOC

@@ -5,9 +5,15 @@ slug: "sliding-window-technique"
 date: 2025-06-04
 author: Anubhav Srivastava
 tags: [algorithms, sliding window]
+version: 1.0
 ---
 
-#### What is Sliding Window technique?
+* TOC
+{:toc}
+
+---
+
+## What is Sliding Window technique?
 Sliding window is a technique used for solving problems involving arrays, lists, or strings by processing a fixed-size portion of the data at a time. It's often used to efficiently find subarrays, substrings, or windows that meet a specific criteria. It is mostly used when the solution to the problem lies in a contiguous part of the data that is being processed.
 
 Let's take a classic example to illustrate how sliding window helps in reducing the time complexity while solving problems.
@@ -25,9 +31,9 @@ This allows us to update the sum in constant time, without recalculating the ent
 
 ---
 
-#### 🧩 Pattern 1: Fixed-Size Sliding Window
+### 🧩 Pattern 1: Fixed-Size Sliding Window
 
-##### 📘 Problem: Maximum Average Subarray I (Leetcode 643)
+#### 📘 Problem: Maximum Average Subarray I (Leetcode 643)
 
 **Link:** [https://leetcode.com/problems/maximum-average-subarray-i/](https://leetcode.com/problems/maximum-average-subarray-i/)
 
@@ -84,10 +90,10 @@ public class Solution {
 
 ---
 
-#### 🧩 Pattern 2: Variable-Size Sliding Window
+### 🧩 Pattern 2: Variable-Size Sliding Window
 
 
-##### 📘 Problem: Longest Substring Without Repeating Characters (Leetcode 3)
+#### 📘 Problem: Longest Substring Without Repeating Characters (Leetcode 3)
 
 **Link:** [https://leetcode.com/problems/longest-substring-without-repeating-characters/](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
@@ -151,9 +157,9 @@ public class Solution {
 
 ---
 
-#### 🧩 Pattern 3: Variable-Size Sliding Window with HashMap/HashSet (Frequency Tracking)
+### 🧩 Pattern 3: Variable-Size Sliding Window with HashMap/HashSet (Frequency Tracking)
 
-##### 📘 Problem: Minimum Window Substring (Leetcode 76)
+#### 📘 Problem: Minimum Window Substring (Leetcode 76)
 
 **Link:** [https://leetcode.com/problems/minimum-window-substring/](https://leetcode.com/problems/minimum-window-substring/)
 
@@ -246,20 +252,20 @@ public class Solution {
 
 ---
 
-#### 🧩 Pattern 3: Variable-Size Sliding Window with HashMap/HashSet (Frequency Tracking)
+### 🧩 Pattern 3: Variable-Size Sliding Window with HashMap/HashSet (Frequency Tracking)
 
-##### 📘 Problem: Replace the Substring for Balanced String (Leetcode 1234)
+#### 📘 Problem: Replace the Substring for Balanced String (Leetcode 1234)
 
 **Link:** [https://leetcode.com/problems/replace-the-substring-for-balanced-string/](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)
 
-#### 🔍 Problem Summary
+##### 🔍 Problem Summary
 Given a string s consisting only of characters 'Q', 'W', 'E', and 'R'.
 
 The string is considered balanced if each of these four characters occurs exactly n/4 times, where n is the length of the string.
 
 Our task is to find the minimum length of a substring that you can replace (with any combination of characters) such that the resulting string is balanced.
 
-###### 🎯 Goal
+##### 🎯 Goal
 Find the minimum window (substring) length that, if replaced with any characters, would make the entire string balanced.
 
 ##### 🧠 Key Observations

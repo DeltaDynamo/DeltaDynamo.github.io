@@ -5,9 +5,15 @@ slug: "layered-architecture-pattern"
 date: 2025-06-29
 author: Anubhav Srivastava
 tags: [software engineering, design pattern]
+version: 1.0
 ---
 
-### ✅ What is Layered Architecture?
+* TOC
+{:toc}
+
+---
+
+## ✅ What is Layered Architecture?
 
 Layered Architecture (also called n-tier architecture) is a software design pattern that organizes an application into logical layers — each with a specific responsibility.
 
@@ -67,7 +73,7 @@ com.example.todoapp
 
 ### 🧱 What Each Layer Does
 
-#### 1. **Controller Layer (`controller`)**
+#### 1. Controller Layer (`controller`)
 
 > Talks to the outside world — handles HTTP requests and responses.
 
@@ -92,7 +98,7 @@ public class TodoController {
 
 ---
 
-#### 2. **Service Layer (`service`)**
+#### 2. Service Layer (`service`)
 
 > Contains **business logic** — rules for how the app behaves.
 
@@ -114,7 +120,7 @@ public class TodoService {
 
 ---
 
-#### 3. **Repository Layer (`repository`)**
+#### 3. Repository Layer (`repository`)
 
 > Talks directly to the **database** (or in-memory data source).
 
@@ -130,7 +136,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 
 ---
 
-#### 4. **Model Layer (`model`)**
+#### 4. Model Layer (`model`)
 
 > Defines the **data structure** (aka Entity).
 
@@ -140,7 +146,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 
 ---
 
-#### 5. **Security Layer (`security`)**
+#### 5. Security Layer (`security`)
 
 > Handles **authentication and authorization**
 
@@ -150,7 +156,7 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 
 ---
 
-#### 6. **Application Entry Point**
+#### 6. Application Entry Point
 
 ```java
 @SpringBootApplication
@@ -166,7 +172,7 @@ public class TodoAppApplication {
 
 ---
 
-### 🔁 Why should we NOT Combine Service & Repository?
+## 🔁 Why should we NOT Combine Service & Repository?
 
 We *can* technically skip the service layer and call the repository from the controller in **small prototypes**, but here's why that's discouraged in real-world apps:
 
@@ -181,7 +187,7 @@ So, *Service Layer = Flexibility + Clean Code + Better Design*
 
 ---
 
-### 🔁 Request Lifecycle
+## 🔁 Request Lifecycle
 ```
     Client ->> Controller: GET /api/todos
     Controller ->> Service: getAllTodos()
@@ -192,7 +198,7 @@ So, *Service Layer = Flexibility + Clean Code + Better Design*
 ```
 ---
 
-### ✅ Summary
+## ✅ Summary
 
 | Layer      | Responsibility                           | Why It's Needed                     |
 | ---------- | ---------------------------------------- | ----------------------------------- |

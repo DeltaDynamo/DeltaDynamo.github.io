@@ -5,6 +5,12 @@ slug: "two-pointers-technique"
 date: 2025-06-16
 author: Anubhav Srivastava
 tags: [algorithms, two pointers]
+version: 1.0
+---
+
+* TOC
+{:toc}
+
 ---
 
 Two Pointer technique uses **two indices** that traverse the data structure (typically arrays or linked lists) in a **coordinated** way. Depending on the problem, the pointers can behave as follows:
@@ -155,7 +161,7 @@ public List<List<Integer>> threeSum(int[] nums) {
 
 ### 💡 Pattern 5: Bidirectional Scan
 
-##### 📍 Problem: [Leetcode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+#### 📍 Problem: [Leetcode 42 - Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 
 **Compute** how much water can be trapped after raining given elevation map.
 

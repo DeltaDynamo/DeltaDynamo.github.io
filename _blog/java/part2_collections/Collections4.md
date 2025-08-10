@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Part 2 : Collections Framework (Fail-Fast vs Fail Safe Iterators & Comparators)"
+title: "Core Java Part 2 : Collections Framework (Fail-Fast vs Fail-Safe Iterators & Comparators)"
 slug: "core-java-2-collections-framework-iterators-comparators"
 date: 2025-08-10
 author: Anubhav Srivastava

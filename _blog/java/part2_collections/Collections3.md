@@ -269,3 +269,5 @@ Duplicates are ignored, and elements are in ascending order.
 They may be slightly slower than `HashMap` or `HashSet` for huge data because of O(log n) operations, but they give us the priceless advantage of **sorted access**.
 
 ---
+
+Next post in this series : [Core Java Part 2 : Collections Framework (Fail-Fast vs Fail-Safe Iterators & Comparators)](https://deltadynamo.github.io/blog/core-java-2-collections-framework-iterators-comparators/)

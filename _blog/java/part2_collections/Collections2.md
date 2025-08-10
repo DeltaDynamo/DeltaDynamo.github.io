@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Part 2 : Collections Framework HashMap & HashSet"
+title: "Core Java Part 2 : Collections Framework (HashMap & HashSet)"
 slug: "core-java-2-collections-framework-hashmap-hashset"
 date: 2025-08-08
 author: Anubhav Srivastava
@@ -466,3 +466,5 @@ In worst cases (lots of collisions): O(n)
 * Fast access, but unordered
 
 ---
+
+Next post in this series : [Core Java Part 2 : Collections Framework (TreeMap & TreeSet)](https://deltadynamo.github.io/blog/core-java-2-collections-framework-treemap-treeset)

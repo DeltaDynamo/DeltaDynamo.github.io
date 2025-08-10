@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Part 2 : Collections Framework Introduction, ArrayList & LinkedList"
+title: "Core Java Part 2 : Collections Framework (Introduction, ArrayList & LinkedList)"
 slug: "core-java-2-collections-framework-intro-list"
 date: 2025-08-07
 author: Anubhav Srivastava
@@ -486,3 +486,5 @@ list.remove(1);
 | Memory usage      | Less (array)              | More (node objects, links) |
 
 ---
+
+Next post in this series : [Core Java Part 2 : Collections Framework (HashMap & HashSet)](https://deltadynamo.github.io/blog/core-java-2-collections-framework-hashmap-hashset/)

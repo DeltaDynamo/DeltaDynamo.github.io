@@ -241,6 +241,22 @@ Vertex AI is Google Cloud’s **end-to-end platform** for building, training, de
   * *Vertex AI Studio*: For enterprises—secure, customizable, integrates with Vertex AI ecosystem.
   * *Google AI Studio*: For developers—fast prototyping, experimentation, and building apps quickly.
 
+### 2.6 Google Agentspace
+
+* Definition: An enterprise-wide agentic workspace that combines multimodal search, LLM reasoning (Gemini), and workflows/actions. It doesn’t just search — it also summarizes, reasons, and takes next steps across multiple enterprise systems.
+
+* Purpose: Acts as an AI-powered productivity hub for employees (like a supercharged AI assistant inside the organization).
+
+* Typical Users: Business leaders, analysts, or employees who need cross-tool insights and automation.
+
+| Feature         | **Vertex AI Search**                                  | **Google Agentspace**                                          |
+| --------------- | ----------------------------------------------------- | -------------------------------------------------------------- |
+| **Focus**       | Domain-specific **search + Q\&A**                     | Enterprise-wide **assistant + workflows**                      |
+| **Primary Use** | Powering apps (customer search, knowledge base)       | Boosting employee productivity                                 |
+| **Data Source** | Connected knowledge bases, websites, product catalogs | Multiple enterprise tools (Jira, Confluence, CRM, email, docs) |
+| **Output**      | Answers grounded in retrieved docs                    | Synthesized insights + recommended actions                     |
+| **Users**       | Developers (build solutions)                          | Business end-users (consume solutions)                         |
+
 ---
 
 ## 📘 Section 3: Techniques to Improve Gen AI Model Output (~20% of the exam)

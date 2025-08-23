@@ -232,9 +232,26 @@ Vertex AI is Google Cloud’s **end-to-end platform** for building, training, de
 
 * **Google Cloud services & APIs for agents**
 
-  * Storage & compute: *Cloud Storage, Cloud Functions, Cloud Run* - Cloud Run Functions and Cloud Run provide serverless platforms fro deploying gen ai applications which use gemini api.
-  * Low Code, No Code Platform: *App Script & App Sheet*
-  * Lite Runtime: This is used for deployment of AI models on on device applications.
+- 🔹 Cloud Storage
+
+  - What it is: Highly durable, scalable, and secure object storage service for unstructured data (files, images, backups, logs).
+
+  - Use Case: Storing millions of product images or backing up company databases.
+
+- 🔹 Cloud Run
+
+  - What it is: A serverless container execution environment — you run apps packaged in containers without managing servers.
+
+  - Use Case: Deploying a backend microservice for an AI chatbot that scales up only when customers use it.
+
+- 🔹 Cloud Functions
+
+  - What it is: Lightweight event-driven serverless functions (run snippets of code in response to events, e.g., file upload, API call).
+
+  - Use Case: Auto-resizing images when uploaded into Cloud Storage.
+
+* Low Code, No Code Platform: *App Script & App Sheet*
+* Lite Runtime: This is used for deployment of AI models on on device applications.
 
 * **When to use Vertex AI Studio vs. Google AI Studio**
 

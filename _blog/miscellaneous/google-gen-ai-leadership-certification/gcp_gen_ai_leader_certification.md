@@ -240,7 +240,7 @@ Vertex AI is Google Cloud’s **end-to-end platform** for building, training, de
 
 - 🔹 Cloud Run
 
-  - What it is: A serverless container execution environment — you run apps packaged in containers without managing servers.
+  - What it is: A serverless container execution environment — where we can run apps packaged in containers without managing servers.
 
   - Use Case: Deploying a backend microservice for an AI chatbot that scales up only when customers use it.
 

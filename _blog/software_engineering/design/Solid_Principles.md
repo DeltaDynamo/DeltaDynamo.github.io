@@ -5,6 +5,7 @@ slug: "solid-principles"
 date: 2025-07-02
 author: Anubhav Srivastava
 tags: [software engineering, design pattern]
+version: 1.0
 ---
 
 * TOC

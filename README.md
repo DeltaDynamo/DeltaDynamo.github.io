@@ -4,15 +4,6 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 ---
 
-## ⚡ Skills
-<div align="center">
-  <a href="https://deltadynamo.github.io/">
-    <img src="https://skillicons.dev/icons?i=java,spring,mysql,mongodb,aws,maven,eclipse,postman,js,ts,nodejs,express,vscode,jest,git,react&perline=8" alt="MySkills" />
-  </a>
-</div>
-
----
-
 ## 🖥️ Professional Experience
 
 ### 🧑‍💻 Software Engineer @ Tata Consultancy Services • 📅 October 2023 – Present  
@@ -26,6 +17,18 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 3️⃣ Refactored legacy DAO layers to streamline queries and enhance data retrieval efficiency across services.
 
 4️⃣ Collaborated with cross-functional teams to plan, implement, and deliver product-aligned features.
+
+---
+
+## ⚡ Skills
+<div align="center">
+  <a href="https://deltadynamo.github.io/">
+    <img src="https://skillicons.dev/icons?i=java,spring,mysql,mongodb,aws,maven,eclipse,postman,js,ts,nodejs,express,vscode,jest,git,react&perline=8" alt="MySkills" />
+  </a>
+</div>
+
+#### 🏅 Certifications
+  - ##### 1️⃣ [Generative AI Leader Certification](https://www.credly.com/badges/b2281318-8c36-4278-96ef-031e3f699814/public_url) - `Google Cloud`
 
 ---
 

@@ -22,12 +22,10 @@ header_pages:
 
 minima:
   skin: dark
-
   include:
     - head-custom.html
-
   date_format: "%Y-%m-%d"
-
+  show_excerpts: true
   social_links:
     - title: Github
       icon: github

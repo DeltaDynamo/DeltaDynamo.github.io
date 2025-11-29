@@ -1,5 +1,8 @@
-.wrapper {
-  max-width: 80vw;
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 65vw;
+    margin: 0 auto;
+  }
 }
 
 .post-tags {

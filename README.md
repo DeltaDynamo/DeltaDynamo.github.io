@@ -18,6 +18,8 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 4️⃣ Collaborated with cross-functional teams to plan, implement, and deliver product-aligned features.
 
+5️⃣ ***Developed a customizable Excel data transformation tool***, enabling users to select data regions, define row/column based identifying parameters, and apply date-based versioning to normalize heterogeneous Excel formats into a clean, structured Excel output suitable for direct import into database tables; thus automating a previously manual process, ***significantly reducing developer effort and enabling creation of 300K+ production-ready database records***.
+
 ---
 
 ## ⚡ Skills

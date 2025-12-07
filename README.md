@@ -28,6 +28,7 @@ I am driven to tackle challenging business problems and craft efficient, maintai
     <img src="https://skillicons.dev/icons?i=java,spring,mysql,mongodb,aws,maven,eclipse,postman,js,ts,nodejs,express,vscode,jest,git,react&perline=8" alt="MySkills" />
   </a>
 </div>
+<br>
 
 #### 🏅 Certifications
   - ##### 1️⃣ [Generative AI Leader Certification](https://www.credly.com/badges/b2281318-8c36-4278-96ef-031e3f699814/public_url) - `Google Cloud`

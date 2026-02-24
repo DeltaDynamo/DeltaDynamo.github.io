@@ -303,12 +303,6 @@ header {
   -webkit-backdrop-filter: blur(10px);
 }
 
-.site-header .wrapper {
-  width: 60vw;
-  max-width: none;
-  margin: 0 auto;
-}
-
 .site-header,
 .site-header * {
   box-shadow: none !important;
@@ -355,7 +349,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  overflow: hidden;
+  overflow-x: auto;
   border-radius: 12px;
 
   background: var(--glass-bg);
@@ -415,7 +409,6 @@ tbody tr:last-child td {
    ========================================================= */
 
 .site-footer {
-  margin-top: 60px;
   padding: 30px 0 20px;
   text-align: center;
 

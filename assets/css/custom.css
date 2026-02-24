@@ -1,28 +1,156 @@
-@media (min-width: 1200px) {
+/* =========================================================
+   COLOR SYSTEM (Global Theme Variables)
+   ========================================================= */
+:root {
+  /* base backgrounds */
+  --bg-base-start: #050816;
+  --bg-base-mid: #0b0f2a;
+  --bg-base-end: #1e1b4b;
+
+  /* glow colors */
+  --glow-blue: rgba(56,189,248,0.42);
+  --glow-violet: rgba(168,85,247,0.38);
+  --glow-indigo: rgba(99,102,241,0.14);
+
+  --bloom-blue: rgba(56,189,248,0.32);
+  --bloom-violet: rgba(168,85,247,0.30);
+
+  /* vignette */
+  --vignette-dark: rgba(0,0,0,0.55);
+
+  /* text colors */
+  --text-primary: #e5e7eb;
+  --text-heading: #ffffff;
+  --text-muted: #acacac;
+  --text-soft-white: rgba(255, 255, 255, 0.85);
+
+  /* link colors */
+  --link-color: #8b5cf6;
+  --link-hover: #a78bfa;
+  --link-glow: rgba(139,92,246,0.8);
+
+  /* tag colors */
+  /* tag base */
+  --tag-bg: rgba(255,255,255,0.04);
+  --tag-border: rgba(255,255,255,0.08);
+  --tag-text: #cbd5f5;
+
+  /* tag glow accent */
+  --tag-accent-start: rgba(56,189,248,0.25);
+  --tag-accent-end: rgba(168,85,247,0.25);
+
+  /* tag hover state */
+  --tag-hover-bg: rgba(255,255,255,0.08);
+  --tag-hover-text: #ffffff;
+
+  /* glass surfaces */
+  --glass-bg: rgba(255,255,255,0.05);
+  --glass-bg-light: rgba(255,255,255,0.02);
+  --glass-border: rgba(255,255,255,0.08);
+  --glass-border-light: rgba(255,255,255,0.06);
+
+  /* code block */
+  --code-bg: #020617;
+  --code-bg-soft: #020617e6;
+  --code-border: rgba(255,255,255,0.08);
+  --code-inline-bg: rgba(255,255,255,0.06);
+  --code-inline-text: #93c5fd;
+
+  /* syntax highlighting */
+  --syntax-keyword: #c084fc;
+  --syntax-string: #34d399;
+  --syntax-number: #fbbf24;
+  --syntax-function: #60a5fa;
+  --syntax-comment: #6b7280;
+  --syntax-operator: #e879f9;
+  --syntax-class: #22d3ee;
+
+  --glow-blue-soft: rgba(56,189,248,0.12);
+  --glow-violet-soft: rgba(168,85,247,0.12);
+
+  --accent-hover-soft: rgba(139,92,246,0.10);
+
+  --shadow-deep: rgba(0,0,0,0.35);
+  --text-strong: #ffffff;
+  --border-soft: rgba(255,255,255,0.08);
+}
+
+
+/* =========================================================
+   LAYOUT WIDTH (Desktop Only)
+   ========================================================= */
+@media (min-width: 1200px) { 
   .wrapper {
     width: 60vw;
     max-width: none;
   }
 }
 
+/* =========================================================
+   POST TAGS
+   ========================================================= */
+
 .post-tags {
-  margin: 10px 0;
+  margin: 12px 0 16px;
   display: flex;
-  flex-wrap: nowrap;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
 }
- 
+
 .tag-block {
-  background-color: #ffeeac;
-  border: 1px solid #000000;
-  padding: 4px 10px;
-  font-size: 0.85rem;
-  border-radius: 4px;
-  color: #000000;
-  font-weight: 500;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+
+  border-radius: 999px;
+  color: var(--tag-text);
+
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+
+  backdrop-filter: blur(6px);
+
+  transition: all 0.25s ease;
+  cursor: default;
 }
 
+.tag-block::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    120deg,
+    var(--tag-accent-start),
+    var(--tag-accent-end)
+  );
+
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.tag-block:hover {
+  color: var(--tag-hover-text);
+  background: var(--tag-hover-bg);
+  transform: translateY(-1px);
+}
+
+.tag-block:hover::before {
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
 .social-links {
   text-align: center;
   font-size: 1.05rem;
@@ -30,5 +158,364 @@
 
 .separator {
   margin: 0 10px;
-  color: #acacac;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   GLOBAL BACKGROUND + GLOW
+   ========================================================= */
+body {
+  background:
+    radial-gradient(850px at 12% 12%, var(--glow-blue), transparent 60%),
+    radial-gradient(850px at 85% 80%, var(--glow-violet), transparent 60%),
+    radial-gradient(600px at 50% 60%, var(--glow-indigo), transparent 70%),
+    linear-gradient(140deg, var(--bg-base-start) 0%, var(--bg-base-mid) 35%, var(--bg-base-end) 100%);
+
+  color: var(--text-primary);
+}
+
+/* bloom overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 18% 18%, var(--bloom-blue), transparent 50%),
+    radial-gradient(circle at 80% 75%, var(--bloom-violet), transparent 50%);
+
+  filter: blur(120px);
+  opacity: 0.75;
+}
+
+/* vignette */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background: radial-gradient(circle at center, transparent 60%, var(--vignette-dark));
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+h1, h2, h3, h4 {
+  color: var(--text-heading);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-shadow: 0 0 8px var(--link-glow);
+}
+
+
+/* =========================================================
+   CODE BLOCKS
+   ========================================================= */
+pre {
+  background: linear-gradient(145deg, var(--code-bg), var(--code-bg-soft));
+  border: 1px solid var(--code-border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  overflow-x: auto;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),
+    inset 0 0 0.5px rgba(255,255,255,0.08);
+
+  position: relative;
+}
+
+pre::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  background: linear-gradient(120deg, var(--bloom-blue), var(--bloom-violet));
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.6;
+}
+
+code {
+  background: var(--code-inline-bg);
+  padding: 3px 6px;
+  border-radius: 6px;
+  color: var(--code-inline-text);
+  font-size: 0.95em;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.highlight {
+  border-radius: 12px !important;
+}
+
+
+/* =========================================================
+   GLASS CARDS
+   ========================================================= */
+.section-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.site-header,
+header {
+  width: 100%;
+  top: 0;
+  z-index: 100;
+
+  margin: 0;
+  padding: 14px 0;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.site-header .wrapper {
+  width: 60vw;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.site-header,
+.site-header * {
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   NAVBAR LINKS
+   ========================================================= */
+
+.site-title,
+.site-title a,
+nav a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+/* hover glow */
+nav a:hover,
+.site-title a:hover {
+  color: var(--link-hover) !important;
+  text-shadow: 0 0 8px var(--link-glow);
+}
+
+/* =========================================================
+   SYNTAX HIGHLIGHTING
+   ========================================================= */
+.highlight .k  { color: var(--syntax-keyword); }
+.highlight .s  { color: var(--syntax-string); }
+.highlight .mi { color: var(--syntax-number); }
+.highlight .nf { color: var(--syntax-function); }
+.highlight .c  { color: var(--syntax-comment); font-style: italic; }
+.highlight .o  { color: var(--syntax-operator); }
+.highlight .nc { color: var(--syntax-class); }
+
+/* =========================================================
+   TABLE STYLING
+   ========================================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 12px;
+
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+
+  box-shadow:
+    0 10px 30px var(--shadow-deep),
+    inset 0 0 0.5px var(--glass-border);
+}
+
+/* header row */
+thead {
+  background: transparent !important;
+}
+
+th {
+  background: linear-gradient(
+    90deg,
+    var(--glow-blue-soft),
+    var(--glow-violet-soft)
+  ) !important;;
+
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+  color: var(--text-strong);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* body cells */
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--glass-border-light);
+  color: var(--text-primary);
+  font-size: 0.93rem;
+}
+
+/* zebra striping */
+tbody tr:nth-child(even) {
+  background: var(--glass-bg-light);
+}
+
+/* hover interaction */
+tbody tr:hover {
+  background: var(--accent-hover-soft);
+  transition: background 0.2s ease;
+}
+
+/* remove last border */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  margin-top: 60px;
+  padding: 30px 0 20px;
+  text-align: center;
+
+  border-top: 1px solid var(--border-soft);
+
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(6px);
+}
+
+/* wrapper alignment */
+.site-footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.made-with-love {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-strong);
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   SOCIAL LINKS ROW
+   ========================================================= */
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  font-size: 0.95rem;
+  gap: 8px;
+}
+
+/* link style */
+.social-links a {
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 4px 6px;
+
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* underline on hover */
+.social-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: var(--link-hover);
+  transition: width 0.25s ease;
+}
+
+/* hover interaction */
+.social-links a:hover {
+  color: var(--link-hover);
+  text-shadow: 0 0 8px var(--link-glow);
+  transform: translateY(-1px);
+}
+
+.social-links a:hover::after {
+  width: 100%;
+}
+
+/* separator dot */
+.separator {
+  color: var(--text-muted);
+  opacity: 0.6;
+  margin: 0 4px;
+}
+
+/* =========================================================
+   BLOCKQUOTE STYLING
+   ========================================================= */
+
+blockquote {
+  color: var(--text-soft-white);
+
+  border-left: 3px solid var(--link-hover);
+  padding: 10px 10px;
+  margin: 20px 0;
+
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+
+  line-height: 1.4;
+}
+
+blockquote p {
+  color: var(--text-strong);
+}
+
+blockquote {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04),
+              0 0 12px rgba(139,92,246,0.12);
 }

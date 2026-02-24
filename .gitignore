@@ -131,3 +131,14 @@ dist
 
 #ignore obsidian files
 .obsidian
+
+# Jekyll build output
+_site/
+
+# Bundler / Ruby dependencies
+vendor/
+.bundle/
+
+# Gem files (local env specific)
+Gemfile
+Gemfile.lock

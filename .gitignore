@@ -142,3 +142,5 @@ vendor/
 # Gem files (local env specific)
 Gemfile
 Gemfile.lock
+
+commands.txt

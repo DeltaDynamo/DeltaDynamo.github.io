@@ -86,6 +86,43 @@
   }
 }
 
+@media (max-width: 600px) {
+  .site-nav {
+    background: none !important;
+    border: none !important;
+  }
+  
+  .site-nav input#nav-trigger {
+    display: none !important;
+  }
+
+  .site-nav label[for="nav-trigger"] {
+    display: none !important;
+  }
+
+  .site-nav .menu-icon {
+    display: none !important;
+  }
+
+  .site-nav .nav-items {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-nav .nav-item {
+    text-align: center;
+    margin: auto;
+    line-height: unset;
+  }
+
+  .site-header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 /* =========================================================
    POST TAGS
    ========================================================= */

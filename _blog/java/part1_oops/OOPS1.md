@@ -97,7 +97,9 @@ public class Test {
 > The reference is of type `Animal`, but the actual object is `Dog` or `Cat`.
 > At **runtime**, the JVM decides which `speak()` to call.
 
-How Does Method Overriding Work Internally in Java (Using the Memory Model)?
+---
+
+##### How Does Method Overriding Work Internally in Java (Using the Memory Model)?
 
 When a method is overridden in Java, the decision of which method to execute is made at runtime, not compile time. This is called dynamic dispatch.
 Let’s understand it using the JVM memory model.
@@ -106,34 +108,35 @@ Let’s understand it using the JVM memory model.
 
 In the JVM:
 >Heap → Stores objects
+
 >Stack → Stores method calls and references
+
 >Method Area (Metaspace) → Stores class metadata (method definitions, bytecode)
 
 Suppose:
 
-'''Java
+``` Java
 class Parent {
     void show() { System.out.println("Parent"); }
 }
 
 class Child extends Parent {
     void show() { System.out.println("Child"); }
-}'''
+}
+```
 
 And we write:
 
-'''Java
+```Java
 Parent obj = new Child();
 obj.show();
-'''
+```
 
 2️⃣ What Happens Step by Step?
 
-> new Child()
+> new Child() → A Child object is created in the heap.
 
-→ A Child object is created in the heap.
-Parent obj
-→ The reference variable obj is stored in the stack, but it only holds a reference to the heap object.
+> Parent obj → The reference variable obj is stored in the stack, but it only holds a reference to the heap object.
 
 Important part:
 The actual object in heap is Child, not Parent.
@@ -145,21 +148,20 @@ Compiler checks: Does Parent have a show() method?
 Yes → Compilation succeeds.
 
 At runtime:
-JVM looks at the actual object in heap
-The object’s internal structure contains a pointer to its class metadata.
-The JVM uses a mechanism similar to a virtual method table (vtable) to resolve overridden methods.
+- JVM looks at the actual object in heap
+- The object’s internal structure contains a pointer to its class metadata.
+- The JVM uses a mechanism similar to a virtual method table (vtable) to resolve overridden methods.
 
 Since the object is of type Child, it calls Child.show().
 This lookup is called dynamic method dispatch.
 
 4️⃣ Why It Works This Way
-Because Java supports polymorphism.
+- Because Java supports polymorphism.
 
-The reference type (Parent) ensures:
-What methods are accessible (compile-time safety)
+- The reference type (Parent) ensures:
+- What methods are accessible (compile-time safety)
 
-The object type (Child) decides:
-Which implementation runs (runtime flexibility)
+The object type (Child) decides: Which implementation to run (runtime flexibility)
 
 ---
 

@@ -144,3 +144,4 @@ Gemfile
 Gemfile.lock
 
 commands.txt
+_site*

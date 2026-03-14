@@ -345,10 +345,9 @@ header {
   z-index: 100;
 
   margin: 0;
-  padding: 14px 0;
+  padding: 8px 0;
 
   border-bottom: 1px solid var(--border-soft);
-  border-radius: 10px;
 
   background: rgba(255,255,255,0.02);
   backdrop-filter: blur(10px);
@@ -358,6 +357,7 @@ header {
 .site-header,
 .site-header * {
   box-shadow: none !important;
+  border-top: none;
 }
 
 /* =========================================================
@@ -370,6 +370,7 @@ nav a {
   color: var(--text-primary) !important;
   text-decoration: none;
   transition: all 0.2s ease;
+  font-weight: 400;
 
   display: inline-flex;
   align-items: center;

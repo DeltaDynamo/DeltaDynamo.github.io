@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Java Stream API Guide : Part 1 Theoretical Approach towards Stream"
-slug: "core-java-stream-api-part-1-theoretical-approach"
-date: 2026-03-10
+title: "Core Java Chapter 3.2.1 - Java Stream API Guide Part 1 (Theoretical Approach towards Stream)"
+slug: "core-java-3-2-1-stream-api-part-1-theoretical-approach"
+date: 2025-09-15
+modified_date: 2025-09-15
 author: Anubhav Srivastava
-tags: [core java, stream api, data processing pipeline]
+tags: [core java, java 8 features, stream api, data processing pipeline]
 version: 1.0
 ---
 
@@ -600,104 +601,3 @@ Lazy evaluation combined with short-circuiting enables streams to:
 This design is one of the key reasons why the Stream API provides both **cleaner code** and **better performance characteristics** compared to traditional loop-based approaches.
 
 ---
-
-### Quick Revision
-
-The following section summarizes the above blog into a quick revision summary.
-
-```markdown
-### Java Stream API — Quick Interview Pointers
-
-**Why Streams were introduced**
-
-* Reduce boilerplate loop-based collection processing
-* Shift from **imperative (how)** to **declarative (what)** style
-* Make transformations **composable and readable**
-* Simplify **parallel processing**
-* Enable **pipeline-based data processing**
-
----
-
-**Stream Concept**
-
-* A **Stream is a data processing pipeline**
-* It processes data **from a source**
-* Streams **do not store data**
-* Streams **do not modify the source**
-
----
-
-**Stream Pipeline Structure**
-
-* **Source → Intermediate Operations → Terminal Operation**
-
----
-
-**Source**
-
-* Provides data to the stream
-* Common sources: collections, arrays, files, generators
-
----
-
-**Intermediate Operations**
-
-* Transform the stream
-* Return another stream
-* **Lazy (not executed immediately)**
-* Used to build the pipeline
-
----
-
-**Terminal Operations**
-
-* **Trigger execution of the pipeline**
-* Produce a final result
-* Close the stream
-
----
-
-**Internal Iteration**
-
-* Streams use **internal iteration**
-* JVM controls element traversal
-* Enables optimizations and parallel execution
-
----
-
-**Streams Are Single-Use**
-
-* A stream can be consumed **only once**
-* After a terminal operation, it **cannot be reused**
-
----
-
-**Lazy Evaluation**
-
-* Intermediate operations execute **only when terminal operation appears**
-* Enables performance optimizations
-
----
-
-**Operation Fusion / Vertical Processing**
-
-* Multiple operations are **combined into a single traversal**
-* Each element flows through the **entire pipeline one stage at a time**
-
----
-
-**Short-Circuiting**
-
-* Some operations **terminate processing early**
-* Stream stops once required result is found
-
----
-
-**Key Benefits**
-
-* Cleaner and more expressive code
-* Composable transformations
-* Single-pass processing
-* Efficient execution
-* Easy parallelization
-```

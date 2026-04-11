@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Core Java Part 3 : Java 8 Features (Optional, Method References & Default/Static Methods in Interfaces)"
-slug: "core-java-3-java8-features-optionals-method-references"
-date: 2025-09-14
-modified_date: 2025-09-14
+title: "Core Java Chapter 3.3 : Java 8 Features (Optional, Method References & Default/Static Methods in Interfaces)"
+slug: "core-java-3-3-java8-features-optionals-method-references"
+date: 2025-09-16
+modified_date: 2025-09-16
 author: Anubhav Srivastava
-tags: [core java, java 8, optional, method references]
+tags: [core java, java 8 features, optional, method references]
 version: 1.0
 ---
 

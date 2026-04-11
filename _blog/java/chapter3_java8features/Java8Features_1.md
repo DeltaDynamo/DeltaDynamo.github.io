@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Core Java Part 3 : Java 8 Features (Lambdas, Functional Interfaces & Stream API)"
-slug: "core-java-3-java8-features-lambdas-functional-interfaces-stream"
+title: "Core Java Chapter 3.1 : Java 8 Features (Lambdas & Functional Interfaces)"
+slug: "core-java-3-1-java8-features-lambdas-functional-interfaces"
 date: 2025-09-14
 modified_date: 2025-09-14
 author: Anubhav Srivastava
-tags: [core java, java 8, lambdas, functional interfaces, streams]
+tags: [core java, java 8 features, lambdas, functional interfaces]
 version: 1.0
 ---
 

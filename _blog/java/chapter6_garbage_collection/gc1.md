@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Core Java Part 6 : Garbage Collection & JVM Memory Management"
-slug: "core-java-6-garbage-collection-jvm"
+title: "Core Java Chapter 6.1 : Garbage Collection & JVM Memory Management"
+slug: "core-java-6-1-garbage-collection-jvm"
 date: 2025-07-21
 author: Anubhav Srivastava
 tags: [core java, garbage collection, memory]

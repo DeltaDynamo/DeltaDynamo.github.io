@@ -729,3 +729,41 @@ blockquote {
   border-left: 1px solid var(--toc-divider);
   padding-left: 10px;
 }
+
+/* Blog Search Bar */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+#tag-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 16px;
+  font-size: 14px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+
+  color: var(--text-primary);
+  outline: none;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+#tag-input::placeholder {
+  color: var(--text-muted);
+}
+
+#tag-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}

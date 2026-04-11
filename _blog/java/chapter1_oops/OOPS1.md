@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Core Java Chapter 1 : Object Oriented Principles (Four Pillars & Object Equality)"
-slug: "core-java-1-oops-four-pillars"
+title: "Core Java Chapter 1.1 : Object Oriented Principles (Four Pillars & Object Equality)"
+slug: "core-java-1-1-oops-four-pillars"
 date: 2025-07-20
 author: Anubhav Srivastava
-tags: [core java, object oriented programming]
+tags: [core java, object oriented programming, polymorphism, inheritance, encapsulation, abstraction]
 version: 1.1
 ---
 

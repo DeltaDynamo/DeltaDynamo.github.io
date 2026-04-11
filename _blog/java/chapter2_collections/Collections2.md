@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Core Java Part 2 : Collections Framework (HashMap & HashSet)"
-slug: "core-java-2-collections-framework-hashmap-hashset"
+title: "Core Java Part 2.2 : Collections Framework (HashMap & HashSet)"
+slug: "core-java-2-2-collections-framework-hashmap-hashset"
 date: 2025-08-08
 author: Anubhav Srivastava
 tags: [core java, collections framework, hashmap, hashset]

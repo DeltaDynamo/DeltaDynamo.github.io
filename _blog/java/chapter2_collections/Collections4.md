@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Core Java Part 2 : Collections Framework (Fail-Fast vs Fail-Safe Iterators & Comparators)"
-slug: "core-java-2-collections-framework-iterators-comparators"
+title: "Core Java Chapter 2.4 : Collections Framework (Immutability Fail-Fast vs Fail-Safe Iterators & Comparators)"
+slug: "core-java-2-4-collections-framework-iterators-comparators"
 date: 2025-08-10
 author: Anubhav Srivastava
-tags: [core java, collections framework, iterator, comparator]
+tags: [core java, collections framework, immutability, iterator, comparator]
 version: 1.0
 ---
 

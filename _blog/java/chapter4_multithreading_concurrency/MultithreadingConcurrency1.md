@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Core Java Part 4 : Multithreading & Concurrency Introduction"
-slug: "core-java-4-multithreading-concurrency"
+title: "Core Java Chapter 4.1 : Multithreading & Concurrency Introduction"
+slug: "core-java-4-1-multithreading-concurrency"
 date: 2025-10-31
 author: Anubhav Srivastava
-tags: [core java, multithreading, concurrency]
+tags: [core java, multithreading, concurrency, thread lifecycle, runnable, callable,]
 version: 1.0
 ---
 

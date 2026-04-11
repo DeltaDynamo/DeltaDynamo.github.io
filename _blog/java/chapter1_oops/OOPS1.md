@@ -766,5 +766,3 @@ Because `hashCode()` has changed, and the set can't find the object anymore.
 | Override both? | ✅ Always if using collections   | Prevent lookup bugs                  |
 
 ---
-
-> **Next Post in this series :** [Core Java Part 1 : Object Oriented Principles (Local & Anonymous Classes)](https://deltadynamo.github.io/blog/core-java-1-oops-local-anonymous-classes/)

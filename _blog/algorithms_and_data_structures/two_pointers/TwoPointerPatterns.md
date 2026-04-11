@@ -4,7 +4,7 @@ title: "Two Pointers : Patterns & Use Cases"
 slug: "two-pointers-technique"
 date: 2025-06-16
 author: Anubhav Srivastava
-tags: [algorithms, two pointers]
+tags: [algorithms, two pointers, dsa]
 version: 1.0
 ---
 

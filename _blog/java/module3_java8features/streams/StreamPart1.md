@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 3.2.1 - Java Stream API Guide Part 1 (Theoretical Approach towards Stream)"
+title: "Core Java Module 3.2.1 - Java Stream API Guide Part 1 (Theoretical Approach towards Stream)"
 slug: "core-java-3-2-1-stream-api-part-1-theoretical-approach"
 date: 2025-09-15
 modified_date: 2025-09-15

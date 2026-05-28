@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 3.3 : Java 8 Features (Optional, Method References & Default/Static Methods in Interfaces)"
+title: "Core Java Module 3.3 : Java 8 Features (Optional, Method References & Default/Static Methods in Interfaces)"
 slug: "core-java-3-3-java8-features-optionals-method-references"
 date: 2025-09-17
 modified_date: 2025-09-17

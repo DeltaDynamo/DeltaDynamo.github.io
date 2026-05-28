@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 1.1 : Object Oriented Principles (Four Pillars & Object Equality)"
+title: "Core Java Module 1.1 : Object Oriented Principles (Four Pillars & Object Equality)"
 slug: "core-java-1-1-oops-four-pillars"
 date: 2025-07-20
 author: Anubhav Srivastava

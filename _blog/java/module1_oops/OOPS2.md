@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 1.2 : Object Oriented Principles (Local & Anonymous Classes)"
+title: "Core Java Module 1.2 : Object Oriented Principles (Local & Anonymous Classes)"
 slug: "core-java-1-2-oops-local-anonymous-classes"
 date: 2025-07-21
 author: Anubhav Srivastava

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "SpringBoot Chapter 1 : Folder Structure, POM & Hello World Application"
-slug: "springboot-chapter-1"
+title: "SpringBoot Module 1 : Folder Structure, POM & Hello World Application"
+slug: "springboot-module-1"
 date: 2025-06-09
 author: Anubhav Srivastava
 tags: [springboot, pom.xml, maven]

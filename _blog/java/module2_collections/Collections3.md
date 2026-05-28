@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 2.3 : Collections Framework (TreeMap & TreeSet)"
+title: "Core Java Module 2.3 : Collections Framework (TreeMap & TreeSet)"
 slug: "core-java-2-3-collections-framework-treemap-treeset"
 date: 2025-08-10
 author: Anubhav Srivastava

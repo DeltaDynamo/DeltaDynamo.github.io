@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 2.1 : Collections Framework (Introduction, ArrayList & LinkedList)"
+title: "Core Java Module 2.1 : Collections Framework (Introduction, ArrayList & LinkedList)"
 slug: "core-java-2-1-collections-framework-intro-list"
 date: 2025-08-07
 author: Anubhav Srivastava

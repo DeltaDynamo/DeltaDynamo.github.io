@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 4.1 : Multithreading & Concurrency Introduction"
+title: "Core Java Module 4.1 : Multithreading & Concurrency Introduction"
 slug: "core-java-4-1-multithreading-concurrency"
 date: 2025-10-31
 author: Anubhav Srivastava

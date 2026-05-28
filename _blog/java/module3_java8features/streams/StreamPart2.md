@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 3.2.2 - Java Stream API Guide Part 2 (Practical)"
+title: "Core Java Module 3.2.2 - Java Stream API Guide Part 2 (Practical)"
 slug: "core-java-3-2-2-stream-api-part-2-practical"
 date: 2025-09-16
 modified_date: 2025-09-16

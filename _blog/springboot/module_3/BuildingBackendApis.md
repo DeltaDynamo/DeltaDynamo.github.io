@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SpringBoot Chapter 3 : Building REST API's (Key Annotations)"
+title: "SpringBoot Module 3 : Building REST API's (Key Annotations)"
 slug: "building-rest-apis-todo"
 date: 2025-07-14
 author: Anubhav Srivastava

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Core Java Chapter 3.1 : Java 8 Features (Lambdas & Functional Interfaces)"
+title: "Core Java Module 3.1 : Java 8 Features (Lambdas & Functional Interfaces)"
 slug: "core-java-3-1-java8-features-lambdas-functional-interfaces"
 date: 2025-09-14
 modified_date: 2025-09-14

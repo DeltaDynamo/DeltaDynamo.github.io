@@ -1,4 +1,4 @@
-Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus on **Backend Development**. While my expertise lies in building robust, secure and scalable backend systems, I also have a bit of hands on in **Frontend Development**, which allows me to contribute across the full stack.
+Hello, I’m **Anubhav Srivastava**, a **Software Engineer** with a strong focus on **Backend Development**. My expertise lies in building robust, secure and scalable backend systems.
 
 I am driven to tackle challenging business problems and craft efficient, maintainable solutions that deliver lasting value and measurable impact to the business. I also enjoy contributing to open-source projects and build my own in my spare time.
 
@@ -6,11 +6,13 @@ I am driven to tackle challenging business problems and craft efficient, maintai
 
 ## 🖥️ Professional Experience
 
-### 🧑‍💻 Software Engineer @ Tata Consultancy Services • 📅 October 2023 – Present  
- 
-> I am part of the Core Product Development Team for a banking software suite, where I design, develop, and optimize backend services and modules critical to business operations.
+### 🧑‍💻 Associate Consultant @ Infosys Limited • 📅 October 2026 – Present
 
-1️⃣ ***Designed and developed backend modules*** for the banking engine, including components handling financial calculations and core business logic.
+> Part of the development team building enterprise-grade Financial solutions using Java, Spring Boot, Microservices, RDBMS etc. focussing on backend services, critical business workflows, and high-reliability transaction-oriented systems.
+
+### 🧑‍💻 Software Engineer @ Tata Consultancy Services • 📅 October 2023 – October 2026  
+
+1️⃣ ***Developed core modules of a Java/SpringBoot microservice*** for Policy Exit, Maturity, Retirement and Projection financial calculations, implementing business rule processing and transaction centric REST APIs supporting 1.2M+ life and pension policies.
 
 2️⃣ Optimized multiple services, ***improving execution time by ~20% through performance tuning, service refactoring, and efficient data access patterns.***
 
